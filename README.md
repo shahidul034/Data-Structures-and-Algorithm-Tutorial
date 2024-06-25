@@ -1,6 +1,6 @@
 # Data-Structures-and-Algorithm
 ## Datatypes
-### Primitive Data Types
+### 🎯Primitive Data Types
 ✔ Integer: Whole numbers without a fractional part (e.g., -3, 0, 42).
 
 ✔ Floating-point: Numbers with a fractional part (e.g., 3.14, -0.001, 2.0).
@@ -10,7 +10,7 @@
 ✔ Boolean: Represents true or false values.
 
 ✔ Byte: Typically a small integer ranging from 0 to 255.
-### Non-Primitive Data Types
+### 🎯Non-Primitive Data Types
 ✔ Arrays: A collection of elements of the same type, stored in contiguous memory locations.
 
 ✔ Strings: A sequence of characters, often implemented as an array of characters.
@@ -19,7 +19,7 @@
 
 ✔ Classes: In object-oriented programming, a blueprint for creating objects (instances).
 ## Data Structures
-### Linear Data Structures
+### 🎯Linear Data Structures
 ✔ Arrays: Elements are stored in contiguous memory locations.
 
 ✔ Linked Lists: Elements (nodes) are connected by pointers.
@@ -27,13 +27,13 @@
 ✔ Stacks: LIFO (Last In First Out) structure where elements are added/removed from the top.
 
 ✔ Queues: FIFO (First In First Out) structure where elements are added at the rear and removed from the front.
-### Nonlinear Data Structures
+### 🎯Nonlinear Data Structures
 ✔ Trees: Hierarchical structure with a root node and child nodes (e.g., binary trees, AVL trees).
 
 ✔ Graphs: Consist of vertices (nodes) connected by edges. Graphs can be directed or undirected.
 
 ✔ Heaps: A specialized tree-based structure that satisfies the heap property (e.g., max-heap, min-heap).
-### Abstract Data Types (ADTs)
+### 🎯Abstract Data Types (ADTs)
 An Abstract Data Type (ADT) is a type (or class) for objects whose behavior is defined by a set of values and a set of operations. ADTs specify what operations can be performed but not how these operations will be implemented. Examples of ADTs include:
 
 ✔ List: An ordered collection of elements with operations like insertion, deletion, and traversal.
@@ -46,7 +46,7 @@ An Abstract Data Type (ADT) is a type (or class) for objects whose behavior is d
 
 ✔ Set: A collection of unique elements with operations like insertion, deletion, and membership testing.
 
-## Array
+## 🎯Array
 ✅ Basic array example
  
 ```
@@ -88,13 +88,13 @@ int test[2][3] = {{2, 4, 5}, {9, 0, 19}};
     // element of arr in ptr
     ptr = arr;
 ```
-✅ same as before
+✅ Same as before
 ```
     int *ptr;
     int arr[5];
     ptr = &arr[0];
 ```
-✅ access element from array
+✅ Access element from array
 ```
     for (int i = 0; i < 3; ++i)
     {
