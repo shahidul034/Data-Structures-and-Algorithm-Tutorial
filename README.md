@@ -1,6 +1,8 @@
 # Data-Structures-and-Algorithm
 ## Datatypes
 ### 🎯Primitive Data Types
+ Data elements are arranged in a sequential manner.
+ 
 ✔ Integer: Whole numbers without a fractional part (e.g., -3, 0, 42).
 
 ✔ Floating-point: Numbers with a fractional part (e.g., 3.14, -0.001, 2.0).
@@ -11,6 +13,8 @@
 
 ✔ Byte: Typically a small integer ranging from 0 to 255.
 ### 🎯Non-Primitive Data Types
+ Data elements are not arranged in a sequential manner.
+ 
 ✔ Arrays: A collection of elements of the same type, stored in contiguous memory locations.
 
 ✔ Strings: A sequence of characters, often implemented as an array of characters.
@@ -81,6 +85,8 @@ int test[2][3] = {{2, 4, 5}, {9, 0, 19}};
     }
 ```
 ✅ Pointer
+ A pointer is a variable that stores the memory address of another variable. Pointers are used to indirectly access and manipulate data in memory.
+ 
 ```
     int *ptr;
     int arr[5];
@@ -101,3 +107,33 @@ int test[2][3] = {{2, 4, 5}, {9, 0, 19}};
         cout << "&arr[" << i << "] = " << *(ptr+i) << endl;
     }
 ```
+✅ Structure
+```
+struct Person {
+    char name[50];
+    int age;
+    char address[100];
+};
+struct Person person;
+person.name = "John Doe";
+person.age = 35;
+person.address = "123 Main St, Anytown USA";
+```
+✅ Class
+Classes can have special member functions called constructors and destructors. Constructors are used to initialize object data, while destructors are called when an object is destroyed.
+```
+class Person {
+public:
+    Person(std::string n, int a) {
+        name = n;
+        age = a;
+    }
+
+    ~Person() {
+        std::cout << "Destroying Person object: " << name << std::endl;
+    }
+
+    // Other member functions...
+};
+```
+
