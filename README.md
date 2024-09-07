@@ -197,7 +197,7 @@ int main() {
 ```
 #### Important Functions: 
 
-> push_back(value): Adds an element to the end of the vector.
+push_back(value): Adds an element to the end of the vector.
 
 pop_back(): Removes the last element.
 
