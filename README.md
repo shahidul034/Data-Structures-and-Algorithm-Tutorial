@@ -157,10 +157,10 @@ cout<<p1.name<<endl;
 
 2) Create an Employee class that holds information about an employee, such as name, employee ID, department, and salary. Create an array of employees and implement methods to add a new employee, search for an employee by ID, and display all employees in a specific department.
 
-## C++ Standard Template Library (STL) Tutorial 
+## 🎯C++ Standard Template Library (STL) Tutorial 
 The Standard Template Library (STL) in C++ is a powerful library that provides data structures and algorithms to help you efficiently store and manipulate data. Here's a basic introduction to some of the most commonly used components in the STL, focusing only on the most important and regularly used functions.
 
-### Vector
+### ✅Vector
 A vector is a dynamic array that can grow in size.
 ```
 #include <iostream>
@@ -205,7 +205,7 @@ size(): Returns the number of elements in the vector.
 
 []: Accesses elements by index.
 
-### Stack 
+### ✅Stack 
 A stack follows the LIFO (Last In, First Out) principle.
 ```
 #include <iostream>
@@ -240,7 +240,7 @@ pop(): Removes the top element.
 top(): Returns the top element.
 
 empty(): Checks if the stack is empty.
-### Queue
+### ✅Queue
 A queue follows the FIFO (First In, First Out) principle.
 ```
 #include <iostream>
@@ -275,7 +275,7 @@ pop(): Removes the front element.
 front(): Returns the front element.
 
 back(): Returns the last element.
-### Set
+### ✅Set
 A set stores unique elements in sorted order.
 ```
 #include <iostream>
@@ -315,7 +315,7 @@ erase(value): Removes an element.
 
 find(value): Finds an element.
 
-### Map 
+### ✅Map 
 A map stores key-value pairs in sorted order of keys.
 ```
 #include <iostream>
@@ -355,7 +355,7 @@ find(key): Finds an element by key.
 
 erase(key): Removes an element by key.
 
-### Algorithm (std::sort, std::reverse, etc.)
+### ✅Algorithm 
 STL also provides many useful algorithms. Here are some commonly used ones:
 ```
 #include <iostream>
@@ -393,3 +393,13 @@ sort(start, end): Sorts the range [start, end).
 reverse(start, end): Reverses the range [start, end).
 
 binary_search(start, end, value): Checks if a value is present in a sorted range.
+
+🚩Question
+
+1) **Problem Statement:** Given an array of integers, remove all the duplicate elements and return the unique elements in the same order as they first appeared.
+
+2) **Problem Statement:** Given a list of words, count the frequency of each word and return the results in a dictionary (map).
+
+3) **Problem Statement:** Given a list of integers, check if the list contains any duplicates.
+
+4) **Problem Statement:** Given a string containing just the characters (, ), {, }, [ and ], determine if the input string is valid. The string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order.
