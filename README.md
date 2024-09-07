@@ -1,10 +1,10 @@
 # Data-Structures-and-Algorithm
-## Installation
-[Codeblocks](https://www.codeblocks.org/downloads/binaries/)
+## 🚀Installation
+⬇️[Codeblocks](https://www.codeblocks.org/downloads/binaries/)
 
 File: codeblocks-20.03mingw-setup.exe
-## Datatypes
-### 🎯Primitive Data Types
+## 🎯Datatypes
+### ✅Primitive Data Types
  Data elements are arranged in a sequential manner.
  
 ✔ Integer: Whole numbers without a fractional part (e.g., -3, 0, 42).
@@ -16,7 +16,7 @@ File: codeblocks-20.03mingw-setup.exe
 ✔ Boolean: Represents true or false values.
 
 ✔ Byte: Typically a small integer ranging from 0 to 255.
-### 🎯Non-Primitive Data Types
+### ✅Non-Primitive Data Types
  Data elements are not arranged in a sequential manner.
  
 ✔ Arrays: A collection of elements of the same type, stored in contiguous memory locations.
@@ -26,8 +26,8 @@ File: codeblocks-20.03mingw-setup.exe
 ✔ Structures: A collection of variables of different data types under a single name.
 
 ✔ Classes: In object-oriented programming, a blueprint for creating objects (instances).
-## Data Structures
-### 🎯Linear Data Structures
+## 🎯Data Structures
+### ✅Linear Data Structures
 ✔ Arrays: Elements are stored in contiguous memory locations.
 
 ✔ Linked Lists: Elements (nodes) are connected by pointers.
@@ -35,13 +35,13 @@ File: codeblocks-20.03mingw-setup.exe
 ✔ Stacks: LIFO (Last In First Out) structure where elements are added/removed from the top.
 
 ✔ Queues: FIFO (First In First Out) structure where elements are added at the rear and removed from the front.
-### 🎯Nonlinear Data Structures
+### ✅Nonlinear Data Structures
 ✔ Trees: Hierarchical structure with a root node and child nodes (e.g., binary trees, AVL trees).
 
 ✔ Graphs: Consist of vertices (nodes) connected by edges. Graphs can be directed or undirected.
 
 ✔ Heaps: A specialized tree-based structure that satisfies the heap property (e.g., max-heap, min-heap).
-### 🎯Abstract Data Types (ADTs)
+### ✅Abstract Data Types (ADTs)
 An Abstract Data Type (ADT) is a type (or class) for objects whose behavior is defined by a set of values and a set of operations. ADTs specify what operations can be performed but not how these operations will be implemented. Examples of ADTs include:
 
 ✔ List: An ordered collection of elements with operations like insertion, deletion, and traversal.
