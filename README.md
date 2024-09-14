@@ -1,4 +1,4 @@
-# Data-Structures-and-Algorithm
+# Data-Structures-and-Algorithms
 ## Contents
 | #Lab  | Topics name |
 | ------------- | ------------- |
