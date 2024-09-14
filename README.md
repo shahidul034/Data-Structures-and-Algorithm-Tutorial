@@ -5,11 +5,12 @@
 - [ ] Lab3: Stacks and Queues
 - [ ] Lab4: Linked Lists (Part 1)
 - [ ] Lab5: Linked Lists (Part 2)
-- [ ] Lab6: Graphs
-- [ ] Lab7: Dynamic Programming
-- [ ] Lab8: Trees
-- [ ] Lab9: Backtracking and Greedy
-- [ ] Lab10: Hashing
+- [ ] Lab6: Sorting
+- [ ] Lab7: Graphs
+- [ ] Lab8: Dynamic Programming
+- [ ] Lab9: Trees
+- [ ] Lab10: Backtracking and Greedy
+- [ ] Lab11: Hashing
 ## _Lab1_ 
 ## 🚀Installation
 ⬇️[Codeblocks](https://www.codeblocks.org/downloads/binaries/)
