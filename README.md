@@ -1,13 +1,14 @@
 # Data-Structures-and-Algorithm
 ## Contents
-- [x] Lab1: Installation and Introduction to Datatypes, Arrays, Pointers and
+- [x] Lab1: Installation and Introduction to Datatypes, Arrays, Pointers, Structures and Class
 - [x] Lab2: STL
 - [ ] Lab3: Stack and Queue
-## _Lab1_ 🚀Installation
+## _Lab1_ 
+## 🚀Installation
 ⬇️[Codeblocks](https://www.codeblocks.org/downloads/binaries/)
 
 File: codeblocks-20.03mingw-setup.exe
-## 🎯Datatypes
+## Introduction to Datatypes, Arrays, Pointers, Structures and Class
 ### ✅Primitive Data Types
  Data elements are arranged in a sequential manner.
  
@@ -30,7 +31,6 @@ File: codeblocks-20.03mingw-setup.exe
 ✔ Structures: A collection of variables of different data types under a single name.
 
 ✔ Classes: In object-oriented programming, a blueprint for creating objects (instances).
-## 🎯Data Structures
 ### ✅Linear Data Structures
 ✔ Arrays: Elements are stored in contiguous memory locations.
 
@@ -58,8 +58,7 @@ An Abstract Data Type (ADT) is a type (or class) for objects whose behavior is d
 
 ✔ Set: A collection of unique elements with operations like insertion, deletion, and membership testing.
 
-## 🎯Array
-✅ Basic array example
+### ✅ Basic array example
  
 ```c
 #include<iostream>
@@ -79,7 +78,7 @@ int main()
     }
 }
 ```
-✅ Multidimensional Arrays
+### ✅ Multidimensional Arrays
 ```c
 int test[2][3] = {{2, 4, 5}, {9, 0, 19}};
     for (int i = 0; i < 2; ++i)
@@ -92,7 +91,7 @@ int test[2][3] = {{2, 4, 5}, {9, 0, 19}};
         }
     }
 ```
-✅ Pointer
+### ✅ Pointer
  A pointer is a variable that stores the memory address of another variable. Pointers are used to indirectly access and manipulate data in memory.
  
 ```c
@@ -102,20 +101,20 @@ int test[2][3] = {{2, 4, 5}, {9, 0, 19}};
     // element of arr in ptr
     ptr = arr;
 ```
-✅ Same as before
+Same as before
 ```c
     int *ptr;
     int arr[5];
     ptr = &arr[0];
 ```
-✅ Access element from array
+### ✅ Access element from array
 ```c
     for (int i = 0; i < 3; ++i)
     {
         cout << "&arr[" << i << "] = " << *(ptr+i) << endl;
     }
 ```
-✅ Structure
+### ✅ Structure
 ```c
 struct Person {
     char name[50];
@@ -127,7 +126,7 @@ strcpy(p1.name,"shakib");// #include<cstring>
 person.age = 35;
 person.address = "123 Main St, Anytown USA";
 ```
-✅ Class
+### ✅ Class
 
 Classes can have special member functions called constructors and destructors. Constructors are used to initialize object data, while destructors are called when an object is destroyed.
 ```c
@@ -150,19 +149,27 @@ person p1("Karim",25);
 p1.update_name("Testing");
 cout<<p1.name<<endl;
 ```
-🚩Question
+<details>
+
+<summary>Questions and Home Works</summary>
+
+## 🚩Question
 1) Create a Student class that holds information about a student, including their name, roll number, and an array of grades for different subjects. Write methods to calculate and display the student's average grade and their highest grade.
 
 2) Create a BankAccount class that holds information about a bank account, such as account number, account holder name, and balance. Implement methods to deposit, withdraw, and display the account details. Use an array to manage multiple bank accounts.
 
-📝 Home works
+## 📝 Home works
 
 1) Create a Book class that represents a book in a library. Each book has a title, author, ISBN, and availability status (whether the book is available or checked out). Create an array of books to represent the library and implement methods to check out a book, return a book, and display all available books.
 
 2) Create an Employee class that holds information about an employee, such as name, employee ID, department, and salary. Create an array of employees and implement methods to add a new employee, search for an employee by ID, and display all employees in a specific department.
 
-## _Lab2_ 🎯C++ Standard Template Library (STL) Tutorial 
+## _Lab2_ 
+## 🎯C++ Standard Template Library (STL) Tutorial 
 The Standard Template Library (STL) in C++ is a powerful library that provides data structures and algorithms to help you efficiently store and manipulate data. Here's a basic introduction to some of the most commonly used components in the STL, focusing only on the most important and regularly used functions.
+
+</details>
+
 
 ### ✅Vector
 A vector is a dynamic array that can grow in size.
