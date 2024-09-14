@@ -1,4 +1,8 @@
 # Data-Structures-and-Algorithm
+## Contents
+- [x] Lab1: Installation and Introduction to Datatypes, Arrays, Pointers and
+- [x] Lab2: STL
+- [ ] Lab3: Stack and Queue
 ## _Lab1_ 🚀Installation
 ⬇️[Codeblocks](https://www.codeblocks.org/downloads/binaries/)
 
@@ -57,7 +61,7 @@ An Abstract Data Type (ADT) is a type (or class) for objects whose behavior is d
 ## 🎯Array
 ✅ Basic array example
  
-```
+```c
 #include<iostream>
 using namespace std;
 int main()
@@ -76,7 +80,7 @@ int main()
 }
 ```
 ✅ Multidimensional Arrays
-```
+```c
 int test[2][3] = {{2, 4, 5}, {9, 0, 19}};
     for (int i = 0; i < 2; ++i)
     {
@@ -91,7 +95,7 @@ int test[2][3] = {{2, 4, 5}, {9, 0, 19}};
 ✅ Pointer
  A pointer is a variable that stores the memory address of another variable. Pointers are used to indirectly access and manipulate data in memory.
  
-```
+```c
     int *ptr;
     int arr[5];
     // store the address of the first
@@ -99,20 +103,20 @@ int test[2][3] = {{2, 4, 5}, {9, 0, 19}};
     ptr = arr;
 ```
 ✅ Same as before
-```
+```c
     int *ptr;
     int arr[5];
     ptr = &arr[0];
 ```
 ✅ Access element from array
-```
+```c
     for (int i = 0; i < 3; ++i)
     {
         cout << "&arr[" << i << "] = " << *(ptr+i) << endl;
     }
 ```
 ✅ Structure
-```
+```c
 struct Person {
     char name[50];
     int age;
@@ -126,7 +130,7 @@ person.address = "123 Main St, Anytown USA";
 ✅ Class
 
 Classes can have special member functions called constructors and destructors. Constructors are used to initialize object data, while destructors are called when an object is destroyed.
-```
+```c
 class person {
 public:
         string name;
@@ -141,7 +145,7 @@ public:
         }
 };
 ```
-```
+```c
 person p1("Karim",25);
 p1.update_name("Testing");
 cout<<p1.name<<endl;
@@ -162,7 +166,7 @@ The Standard Template Library (STL) in C++ is a powerful library that provides d
 
 ### ✅Vector
 A vector is a dynamic array that can grow in size.
-```
+```c
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -207,7 +211,7 @@ size(): Returns the number of elements in the vector.
 
 ### ✅Stack 
 A stack follows the LIFO (Last In, First Out) principle.
-```
+```c
 #include <iostream>
 #include <stack>
 using namespace std;
@@ -242,7 +246,7 @@ top(): Returns the top element.
 empty(): Checks if the stack is empty.
 ### ✅Queue
 A queue follows the FIFO (First In, First Out) principle.
-```
+```c
 #include <iostream>
 #include <queue>
 using namespace std;
@@ -277,7 +281,7 @@ front(): Returns the front element.
 back(): Returns the last element.
 ### ✅Set
 A set stores unique elements in sorted order.
-```
+```c
 #include <iostream>
 #include <set>
 using namespace std;
@@ -317,7 +321,7 @@ find(value): Finds an element.
 
 ### ✅Map 
 A map stores key-value pairs in sorted order of keys.
-```
+```c
 #include <iostream>
 #include <map>
 using namespace std;
@@ -357,7 +361,7 @@ erase(key): Removes an element by key.
 
 ### ✅Algorithm 
 STL also provides many useful algorithms. Here are some commonly used ones:
-```
+```c
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -394,7 +398,10 @@ reverse(start, end): Reverses the range [start, end).
 
 binary_search(start, end, value): Checks if a value is present in a sorted range.
 
-🚩Question
+
+<details>
+
+<summary>🚩Question</summary>
 
 1) **Problem Statement:** Given an array of integers, remove all the duplicate elements and return the unique elements in the same order as they first appeared.
 
@@ -403,3 +410,9 @@ binary_search(start, end, value): Checks if a value is present in a sorted range
 3) **Problem Statement:** Given a list of integers, check if the list contains any duplicates.
 
 4) **Problem Statement:** Given a string containing just the characters (, ), {, }, [ and ], determine if the input string is valid. The string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order.
+
+</details>
+
+
+
+
