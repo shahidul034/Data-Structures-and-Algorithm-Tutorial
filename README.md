@@ -1,5 +1,19 @@
 # Data-Structures-and-Algorithm
 ## Contents
+| #Lab  | Topics name |
+| ------------- | ------------- |
+| 1 | [Installation and Introduction to Datatypes, Arrays, Pointers, Structures, and Class](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab1) |
+| 2 | [STL (Standard Template Library)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab2) |
+| 3 | Stacks and Queues |
+| 4 | Linked Lists (Part 1) |
+| 5 | Linked Lists (Part 2) |
+| 6 | Sorting |
+| 7 | Graphs |
+| 8 | Dynamic Programming |
+| 9 | Trees |
+| 10 | Backtracking and Greedy |
+| 11 | Hashing |
+<!--
 - [x] [Lab1: Installation and Introduction to Datatypes, Arrays, Pointers, Structures and Class](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab1)
 - [x] [Lab2: STL](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab2)
 - [ ] Lab3: Stacks and Queues
@@ -11,6 +25,7 @@
 - [ ] Lab9: Trees
 - [ ] Lab10: Backtracking and Greedy
 - [ ] Lab11: Hashing
+-->
 ## _Lab1_ 
 ## 🚀Installation
 ⬇️[Codeblocks](https://www.codeblocks.org/downloads/binaries/)
