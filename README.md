@@ -8,7 +8,7 @@
 | 4 | ⏳Linked Lists (Part 1) |
 | 5 | ⏳Linked Lists (Part 2) |
 | 6 | ⏳Sorting |
-| 7 | ⏳ Graphs|
+| 7 | ⏳Graphs|
 | 8 | ⏳Trees |
 | 9 | ⏳Backtracking and Greedy |
 | 10 | ⏳Hashing |
