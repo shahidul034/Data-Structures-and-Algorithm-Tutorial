@@ -2,17 +2,17 @@
 ## Contents
 | #Lab  | Topics name |
 | ------------- | ------------- |
-| 1 | [Installation and Introduction to Datatypes, Arrays, Pointers, Structures, and Class](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab1) |
-| 2 | [STL (Standard Template Library)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab2) |
-| 3 | Stacks and Queues |
-| 4 | Linked Lists (Part 1) |
-| 5 | Linked Lists (Part 2) |
-| 6 | Sorting |
-| 7 | Graphs |
-| 8 | Dynamic Programming |
-| 9 | Trees |
-| 10 | Backtracking and Greedy |
-| 11 | Hashing |
+| 1 | ✔[Installation and Introduction to Datatypes, Arrays, Pointers, Structures, and Class](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab1) |
+| 2 | ✔[STL (Standard Template Library)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab2) |
+| 3 | ⏳Stacks and Queues |
+| 4 | ⏳Linked Lists (Part 1) |
+| 5 | ⏳Linked Lists (Part 2) |
+| 6 | ⏳Sorting |
+| 7 | ⏳ Graphs|
+| 8 | ⏳Trees |
+| 9 | ⏳Backtracking and Greedy |
+| 10 | ⏳Hashing |
+| 11 | ⏳Dynamic Programming |
 <!--
 - [x] [Lab1: Installation and Introduction to Datatypes, Arrays, Pointers, Structures and Class](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab1)
 - [x] [Lab2: STL](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab2)
@@ -35,51 +35,51 @@ File: codeblocks-20.03mingw-setup.exe
 ### ✅Primitive Data Types
  Data elements are arranged in a sequential manner.
  
-✔ Integer: Whole numbers without a fractional part (e.g., -3, 0, 42).
+🟢 Integer: Whole numbers without a fractional part (e.g., -3, 0, 42).
 
-✔ Floating-point: Numbers with a fractional part (e.g., 3.14, -0.001, 2.0).
+🟢 Floating-point: Numbers with a fractional part (e.g., 3.14, -0.001, 2.0).
 
-✔ Character: A single character (e.g., 'a', 'Z', '9').
+🟢 Character: A single character (e.g., 'a', 'Z', '9').
 
-✔ Boolean: Represents true or false values.
+🟢 Boolean: Represents true or false values.
 
-✔ Byte: Typically a small integer ranging from 0 to 255.
+🟢 Byte: Typically a small integer ranging from 0 to 255.
 ### ✅Non-Primitive Data Types
  Data elements are not arranged in a sequential manner.
  
-✔ Arrays: A collection of elements of the same type, stored in contiguous memory locations.
+🟢 Arrays: A collection of elements of the same type, stored in contiguous memory locations.
 
-✔ Strings: A sequence of characters, often implemented as an array of characters.
+🟢 Strings: A sequence of characters, often implemented as an array of characters.
 
-✔ Structures: A collection of variables of different data types under a single name.
+🟢 Structures: A collection of variables of different data types under a single name.
 
-✔ Classes: In object-oriented programming, a blueprint for creating objects (instances).
+🟢 Classes: In object-oriented programming, a blueprint for creating objects (instances).
 ### ✅Linear Data Structures
-✔ Arrays: Elements are stored in contiguous memory locations.
+🟢 Arrays: Elements are stored in contiguous memory locations.
 
-✔ Linked Lists: Elements (nodes) are connected by pointers.
+🟢 Linked Lists: Elements (nodes) are connected by pointers.
 
-✔ Stacks: LIFO (Last In First Out) structure where elements are added/removed from the top.
+🟢 Stacks: LIFO (Last In First Out) structure where elements are added/removed from the top.
 
-✔ Queues: FIFO (First In First Out) structure where elements are added at the rear and removed from the front.
+🟢 Queues: FIFO (First In First Out) structure where elements are added at the rear and removed from the front.
 ### ✅Nonlinear Data Structures
-✔ Trees: Hierarchical structure with a root node and child nodes (e.g., binary trees, AVL trees).
+🟢 Trees: Hierarchical structure with a root node and child nodes (e.g., binary trees, AVL trees).
 
-✔ Graphs: Consist of vertices (nodes) connected by edges. Graphs can be directed or undirected.
+🟢 Graphs: Consist of vertices (nodes) connected by edges. Graphs can be directed or undirected.
 
-✔ Heaps: A specialized tree-based structure that satisfies the heap property (e.g., max-heap, min-heap).
+🟢 Heaps: A specialized tree-based structure that satisfies the heap property (e.g., max-heap, min-heap).
 ### ✅Abstract Data Types (ADTs)
 An Abstract Data Type (ADT) is a type (or class) for objects whose behavior is defined by a set of values and a set of operations. ADTs specify what operations can be performed but not how these operations will be implemented. Examples of ADTs include:
 
-✔ List: An ordered collection of elements with operations like insertion, deletion, and traversal.
+🟢 List: An ordered collection of elements with operations like insertion, deletion, and traversal.
 
-✔ Stack: Operations include push, pop, and peek.
+🟢 Stack: Operations include push, pop, and peek.
 
-✔ Queue: Operations include enqueue, dequeue, and peek.
+🟢 Queue: Operations include enqueue, dequeue, and peek.
 
-✔ Map: A collection of key-value pairs with operations like insertion, deletion, and lookup.
+🟢 Map: A collection of key-value pairs with operations like insertion, deletion, and lookup.
 
-✔ Set: A collection of unique elements with operations like insertion, deletion, and membership testing.
+🟢 Set: A collection of unique elements with operations like insertion, deletion, and membership testing.
 
 ### ✅ Basic array example
  
