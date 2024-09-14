@@ -1,7 +1,7 @@
 # Data-Structures-and-Algorithm
 ## Contents
-- [x] Lab1: Installation and Introduction to Datatypes, Arrays, Pointers, Structures and Class
-- [x] Lab2: STL
+- [x] [Lab1: Installation and Introduction to Datatypes, Arrays, Pointers, Structures and Class](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab1)
+- [x] [Lab2: STL](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab2)
 - [ ] Lab3: Stack and Queue
 ## _Lab1_ 
 ## 🚀Installation
@@ -164,12 +164,10 @@ cout<<p1.name<<endl;
 
 2) Create an Employee class that holds information about an employee, such as name, employee ID, department, and salary. Create an array of employees and implement methods to add a new employee, search for an employee by ID, and display all employees in a specific department.
 
+</details>
 ## _Lab2_ 
 ## 🎯C++ Standard Template Library (STL) Tutorial 
 The Standard Template Library (STL) in C++ is a powerful library that provides data structures and algorithms to help you efficiently store and manipulate data. Here's a basic introduction to some of the most commonly used components in the STL, focusing only on the most important and regularly used functions.
-
-</details>
-
 
 ### ✅Vector
 A vector is a dynamic array that can grow in size.
