@@ -2,7 +2,14 @@
 ## Contents
 - [x] [Lab1: Installation and Introduction to Datatypes, Arrays, Pointers, Structures and Class](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab1)
 - [x] [Lab2: STL](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab2)
-- [ ] Lab3: Stack and Queue
+- [ ] Lab3: Stacks and Queues
+- [ ] Lab4: Linked Lists (Part 1)
+- [ ] Lab5: Linked Lists (Part 2)
+- [ ] Lab6: Graphs
+- [ ] Lab7: Dynamic Programming
+- [ ] Lab8: Trees
+- [ ] Lab9: Backtracking and Greedy
+- [ ] Lab10: Hashing
 ## _Lab1_ 
 ## 🚀Installation
 ⬇️[Codeblocks](https://www.codeblocks.org/downloads/binaries/)
