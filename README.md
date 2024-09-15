@@ -4,7 +4,7 @@
 | ------------- | ------------- |
 | 1 | ✔[Installation and Introduction to Datatypes, Arrays, Pointers, Structures, and Class](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab-1) |
 | 2 | ✔[STL (Standard Template Library)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab-2) |
-| 3 | ⏳Stacks and Queues |
+| 3 | ✔[Stacks and Queues](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab-3) |
 | 4 | ⏳Linked Lists (Part 1) |
 | 5 | ⏳Linked Lists (Part 2) |
 | 6 | ⏳Sorting |
