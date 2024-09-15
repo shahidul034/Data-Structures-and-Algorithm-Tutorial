@@ -13,6 +13,9 @@
 | 9 | ⏳Backtracking and Greedy |
 | 10 | ⏳Hashing |
 | 11 | ⏳Dynamic Programming |
+> [!TIP]
+> Click below to expand the sections.
+
 <!--
 - [x] [Lab1: Installation and Introduction to Datatypes, Arrays, Pointers, Structures and Class](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab1)
 - [x] [Lab2: STL](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab2)
