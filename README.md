@@ -252,22 +252,39 @@ A stack follows the LIFO (Last In, First Out) principle.
 using namespace std;
 
 int main() {
-    stack<int> s;
+	stack<int> s,temp;
 
-    // Push elements onto the stack
-    s.push(10);
-    s.push(20);
-    s.push(30);
+	// Push elements onto the stack
+	s.push(10);
+	s.push(20);
+	s.push(30);
+	while (!s.empty()) {
+		int current = s.top();
+		cout << current << " ";
 
-    // Access the top element
-    cout << "Top element: " << s.top() << endl;  // 30
+		// Remove the top element from the original stack
+		s.pop();
 
-    // Remove the top element
-    s.pop();  // Now top is 20
+		// Push the element onto the temporary stack
+		temp.push(current);
+	}
 
-    cout << "New top element: " << s.top() << endl;  // 20
+	std::cout << std::endl;
 
-    return 0;
+	// Restore the original stack
+	while (!temp.empty()) {
+		s.push(temp.top());
+		temp.pop();
+	}
+	// Access the top element
+	cout << "Top element: " << s.top() << endl;  // 30
+
+	// Remove the top element
+	s.pop();  // Now top is 20
+
+	cout << "New top element: " << s.top() << endl;  // 20
+
+	return 0;
 }
 
 ```
@@ -285,21 +302,34 @@ using namespace std;
 
 int main() {
     queue<int> q;
-
+    
     // Add elements to the queue
     q.push(10);
     q.push(20);
     q.push(30);
-
-    // Access the front and back
-    cout << "Front: " << q.front() << endl;  // 10
-    cout << "Back: " << q.back() << endl;    // 30
-
-    // Remove the front element
-    q.pop();  // Now front is 20
-
-    cout << "New front: " << q.front() << endl;  // 20
-
+    
+    cout << "Method 1: Traversing while preserving the queue" << endl;
+    {
+        queue<int> temp = q; // Create a copy of the original queue
+        while (!temp.empty()) {
+            cout << temp.front() << " ";
+            temp.pop();
+        }
+        cout << endl;
+    }
+    
+    cout << "Method 2: Traversing and restoring the queue" << endl;
+    {
+        int size = q.size();
+        for (int i = 0; i < size; ++i) {
+            int current = q.front();
+            cout << current << " ";
+            q.pop();
+            q.push(current);
+        }
+        cout << endl;
+    }
+    
     return 0;
 }
 ```
