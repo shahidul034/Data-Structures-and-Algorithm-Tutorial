@@ -621,7 +621,8 @@ int main() {
 - Printer task scheduling
 
 <details>
-<summary>🚩Question</summary>
+ 
+<summary>🚩Questions and Home works </summary>
  
 ### Stack Practice Questions
 
@@ -651,7 +652,7 @@ int main() {
 
 ---
 
-## Queue Practice Questions
+#### Queue Practice Questions
 
 1. **Generate Binary Numbers**
    - Given a number `n`, generate and print binary numbers from 1 to `n` using a queue.
