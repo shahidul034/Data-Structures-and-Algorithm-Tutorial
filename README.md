@@ -26,7 +26,10 @@
 - [ ] Lab10: Backtracking and Greedy
 - [ ] Lab11: Hashing
 -->
-## _Lab1_ 
+<details>
+ 
+<summary><h2><i style="color:#43801c;">Lab 1</i></h2></summary>
+ 
 ## 🚀Installation
 ⬇️[Codeblocks](https://www.codeblocks.org/downloads/binaries/)
 
@@ -188,8 +191,10 @@ cout<<p1.name<<endl;
 2) Create an Employee class that holds information about an employee, such as name, employee ID, department, and salary. Create an array of employees and implement methods to add a new employee, search for an employee by ID, and display all employees in a specific department.
 
 </details>
+</details>
 
-## _Lab2_ 
+<details>
+<summary><h2><i>Lab 2</i></h2></summary>
 ## 🎯C++ Standard Template Library (STL) Tutorial 
 The Standard Template Library (STL) in C++ is a powerful library that provides data structures and algorithms to help you efficiently store and manipulate data. Here's a basic introduction to some of the most commonly used components in the STL, focusing only on the most important and regularly used functions.
 
@@ -429,6 +434,7 @@ int main() {
 
 4) **Problem Statement:** Given a string containing just the characters (, ), {, }, [ and ], determine if the input string is valid. The string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order.
 
+</details>
 </details>
 
 
