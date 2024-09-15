@@ -28,7 +28,7 @@
 -->
 <details>
  
-<summary><h2><i style="color:#43801c;">Lab 1</i></h2></summary>
+<summary><h2><i>⭐Lab 1</i></h2></summary>
  
 ## 🚀Installation
 ⬇️[Codeblocks](https://www.codeblocks.org/downloads/binaries/)
@@ -194,7 +194,8 @@ cout<<p1.name<<endl;
 </details>
 
 <details>
-<summary><h2><i>Lab 2</i></h2></summary>
+<summary><h2><i>⭐Lab 2</i></h2></summary>
+ 
 ## 🎯C++ Standard Template Library (STL) Tutorial 
 The Standard Template Library (STL) in C++ is a powerful library that provides data structures and algorithms to help you efficiently store and manipulate data. Here's a basic introduction to some of the most commonly used components in the STL, focusing only on the most important and regularly used functions.
 
