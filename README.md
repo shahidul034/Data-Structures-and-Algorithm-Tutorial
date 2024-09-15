@@ -433,6 +433,176 @@ int main() {
 4) **Problem Statement:** Given a string containing just the characters (, ), {, }, [ and ], determine if the input string is valid. The string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order.
 
 </details>
+</details>
+
+<details>
+<summary><h2><i>👉Lab 3</i></h2></summary>
+ 
+## 🎯Stacks
+A Stack follows the LIFO (Last In First Out) principle. This means that the last element inserted into the stack is the first one to be removed. Imagine a stack of plates; the last plate placed on top is the first to be removed.
+
+### ✅Operations on Stack
+
+Push: Add an element to the top of the stack.
+
+Pop: Remove the top element from the stack.
+
+Peek (Top): Retrieve the top element without removing it.
+
+isEmpty: Check if the stack is empty.
+
+Size: Get the number of elements in the stack.
+
+### ✅Stack Implementation using Array
+```c
+#include <iostream>
+using namespace std;
+
+class Stack {
+    int top;
+    int arr[5]; // Stack size is 5
+
+public:
+    Stack() {
+        top = -1; // Initialize stack as empty
+    }
+
+    bool isFull() {
+        return top == 4; // Check if stack is full
+    }
+
+    bool isEmpty() {
+        return top == -1; // Check if stack is empty
+    }
+
+    void push(int value) {
+        if (isFull()) {
+            cout << "Stack overflow" << endl;
+        } else {
+            arr[++top] = value;
+            cout << "Pushed: " << value << endl;
+        }
+    }
+
+    void pop() {
+        if (isEmpty()) {
+            cout << "Stack underflow" << endl;
+        } else {
+            cout << "Popped: " << arr[top--] << endl;
+        }
+    }
+
+    int peek() {
+        if (isEmpty()) {
+            cout << "Stack is empty" << endl;
+            return -1;
+        } else {
+            return arr[top];
+        }
+    }
+
+    int size() {
+        return top + 1;
+    }
+};
+
+int main() {
+    Stack s;
+    s.push(10);
+    s.push(20);
+    s.push(30);
+    cout << "Top element: " << s.peek() << endl;
+    s.pop();
+    cout << "Top element after pop: " << s.peek() << endl;
+    cout << "Size of stack: " << s.size() << endl;
+    return 0;
+}
+
+```
+## 🎯Queues
+A Queue follows the FIFO (First In First Out) principle. The first element inserted into the queue is the first one to be removed. Think of a queue in a supermarket where the first customer in line is served first.
+
+### ✅Operations on Queue:
+
+Enqueue: Add an element to the end of the queue.
+
+Dequeue: Remove the element from the front of the queue.
+
+Front: Retrieve the front element without removing it.
+
+isEmpty: Check if the queue is empty.
+
+Size: Get the number of elements in the queue.
+
+### ✅Queue Implementation using Array
+```c
+#include <iostream>
+using namespace std;
+
+class Queue {
+    int front, rear;
+    int arr[5]; // Queue size is 5
+
+public:
+    Queue() {
+        front = rear = -1; // Initialize queue as empty
+    }
+
+    bool isFull() {
+        return rear == 4; // Check if queue is full
+    }
+
+    bool isEmpty() {
+        return front == -1; // Check if queue is empty
+    }
+
+    void enqueue(int value) {
+        if (isFull()) {
+            cout << "Queue overflow" << endl;
+        } else {
+            if (front == -1) front = 0;
+            arr[++rear] = value;
+            cout << "Enqueued: " << value << endl;
+        }
+    }
+
+    void dequeue() {
+        if (isEmpty()) {
+            cout << "Queue underflow" << endl;
+        } else {
+            cout << "Dequeued: " << arr[front++] << endl;
+            if (front > rear) front = rear = -1; // Reset if queue becomes empty
+        }
+    }
+
+    int peek() {
+        if (isEmpty()) {
+            cout << "Queue is empty" << endl;
+            return -1;
+        } else {
+            return arr[front];
+        }
+    }
+
+    int size() {
+        if (isEmpty()) return 0;
+        return rear - front + 1;
+    }
+};
+
+int main() {
+    Queue q;
+    q.enqueue(10);
+    q.enqueue(20);
+    q.enqueue(30);
+    cout << "Front element: " << q.peek() << endl;
+    q.dequeue();
+    cout << "Front element after dequeue: " << q.peek() << endl;
+    cout << "Size of queue: " << q.size() << endl;
+    return 0;
+}
+
+```
 
 </details>
 
