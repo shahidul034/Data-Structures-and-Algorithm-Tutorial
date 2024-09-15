@@ -238,12 +238,11 @@ int main() {
 
 ```
 
-> [!IMPORTANT]
 > #### Important Functions: 
-> * push_back(value): Adds an element to the end of the vector.
-> * pop_back(): Removes the last element.
-> * size(): Returns the number of elements in the vector.
-> * []: Accesses elements by index.
+> * `push_back(value)`: Adds an element to the end of the vector.
+> * `pop_back()`: Removes the last element.
+> * `size()`: Returns the number of elements in the vector.
+> * `[]`: Accesses elements by index.
 
 ### ✅Stack 
 A stack follows the LIFO (Last In, First Out) principle.
@@ -272,12 +271,11 @@ int main() {
 }
 
 ```
-> [!IMPORTANT]
 > #### Important Functions: 
-> * push(value): Pushes an element onto the stack.
-> * pop(): Removes the top element.
-> * top(): Returns the top element.
-> * empty(): Checks if the stack is empty.
+> * `push(value)`: Pushes an element onto the stack.
+> * `pop()`: Removes the top element.
+> * `top()`: Returns the top element.
+> * `empty()`: Checks if the stack is empty.
 ### ✅Queue
 A queue follows the FIFO (First In, First Out) principle.
 ```c
@@ -305,12 +303,11 @@ int main() {
     return 0;
 }
 ```
-> [!IMPORTANT]
 > #### Important Functions: 
-> * push(value): Adds an element to the queue.
-> * pop(): Removes the front element.
-> * front(): Returns the front element.
-> * back(): Returns the last element.
+> * `push(value)`: Adds an element to the queue.
+> * `pop()`: Removes the front element.
+> * `front()`: Returns the front element.
+> * `back()`: Returns the last element.
 ### ✅Set
 A set stores unique elements in sorted order.
 ```c
@@ -342,12 +339,11 @@ int main() {
 }
 
 ```
-> [!IMPORTANT]
 > #### Important Functions:
-> * insert(value): Inserts an element (if it’s not already present).
-> * count(value): Checks if an element exists (returns 0 or 1).
-> * erase(value): Removes an element.
-> * find(value): Finds an element.
+> * `insert(value)`: Inserts an element (if it’s not already present).
+> * `count(value)`: Checks if an element exists (returns 0 or 1).
+> * `erase(value)`: Removes an element.
+> * `find(value)`: Finds an element.
 
 ### ✅Map 
 A map stores key-value pairs in sorted order of keys.
@@ -380,12 +376,11 @@ int main() {
 }
 
 ```
-> [!IMPORTANT]
 > #### Important Functions: 
-> * []: Access or insert elements by key.
-> * insert({key, value}): Inserts a key-value pair.
-> * find(key): Finds an element by key.
-> * erase(key): Removes an element by key.
+> * `[]`: Access or insert elements by key.
+> * `insert({key, value})`: Inserts a key-value pair.
+> * `find(key)`: Finds an element by key.
+> * `erase(key)`: Removes an element by key.
 
 ### ✅Algorithm 
 STL also provides many useful algorithms. Here are some commonly used ones:
@@ -419,11 +414,10 @@ int main() {
 }
 
 ```
-> [!IMPORTANT]
 > #### Important Functions: 
-> * sort(start, end): Sorts the range [start, end).
-> * reverse(start, end): Reverses the range [start, end).
-> * binary_search(start, end, value): Checks if a value is present in a sorted range.
+> * `sort(start, end)`: Sorts the range [start, end).
+> * `reverse(start, end)`: Reverses the range [start, end).
+> * `binary_search(start, end, value)`: Checks if a value is present in a sorted range.
 
 
 <details>
@@ -439,6 +433,7 @@ int main() {
 4) **Problem Statement:** Given a string containing just the characters (, ), {, }, [ and ], determine if the input string is valid. The string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order.
 
 </details>
+
 </details>
 
 
