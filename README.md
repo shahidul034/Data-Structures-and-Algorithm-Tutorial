@@ -443,15 +443,15 @@ A Stack follows the LIFO (Last In First Out) principle. This means that the last
 
 ### ✅Operations on Stack
 
-Push: Add an element to the top of the stack.
+`Push:` Add an element to the top of the stack.
 
-Pop: Remove the top element from the stack.
+`Pop:` Remove the top element from the stack.
 
-Peek (Top): Retrieve the top element without removing it.
+`Peek (Top)`: Retrieve the top element without removing it.
 
-isEmpty: Check if the stack is empty.
+`isEmpty`: Check if the stack is empty.
 
-Size: Get the number of elements in the stack.
+`Size`: Get the number of elements in the stack.
 
 ### ✅Stack Implementation using Array
 ```c
@@ -524,15 +524,15 @@ A Queue follows the FIFO (First In First Out) principle. The first element inser
 
 ### ✅Operations on Queue:
 
-Enqueue: Add an element to the end of the queue.
+`Enqueue`: Add an element to the end of the queue.
 
-Dequeue: Remove the element from the front of the queue.
+`Dequeue`: Remove the element from the front of the queue.
 
-Front: Retrieve the front element without removing it.
+`Front`: Retrieve the front element without removing it.
 
-isEmpty: Check if the queue is empty.
+`isEmpty`: Check if the queue is empty.
 
-Size: Get the number of elements in the queue.
+`Size`: Get the number of elements in the queue.
 
 ### ✅Queue Implementation using Array
 ```c
@@ -603,6 +603,82 @@ int main() {
 }
 
 ```
+
+### Stack Applications:
+
+- Expression evaluation (infix to postfix)
+
+- Backtracking algorithms (e.g., maze solving)
+
+- Function call management in recursion
+
+### Queue Applications:
+
+- CPU scheduling
+
+- Breadth-First Search (BFS) in graphs
+
+- Printer task scheduling
+
+<details>
+<summary>🚩Question</summary>
+ 
+### Stack Practice Questions
+
+1. **Reverse a String using Stack**
+   - Write a program to reverse a string using a stack.
+   
+2. **Balanced Parentheses**
+   - Given an expression string with parentheses `(` and `)`, check whether the parentheses are balanced or not using a stack.
+   
+3. **Evaluate Postfix Expression**
+   - Write a program to evaluate a postfix expression (e.g., `231*+9-` equals `-4`).
+   
+4. **Sort a Stack**
+   - Given a stack, write a program to sort its elements using recursion (you can only use stack operations like push, pop, etc.).
+   
+5. **Next Greater Element**
+   - Given an array, for each element, find the next greater element. The next greater element is the first larger number to the right of the current element using a stack.
+
+6. **Implement Two Stacks in an Array**
+   - Implement two stacks in a single array without wasting space.
+
+7. **Stock Span Problem**
+   - Write a program to calculate the span of stock’s price for all days using a stack. The stock span on a given day is defined as the maximum number of consecutive days the stock price was less than or equal to the current price.
+
+8. **Min Stack**
+   - Design a stack that supports `push`, `pop`, `top`, and retrieving the minimum element in constant time.
+
+---
+
+## Queue Practice Questions
+
+1. **Generate Binary Numbers**
+   - Given a number `n`, generate and print binary numbers from 1 to `n` using a queue.
+   
+2. **Reverse a Queue**
+   - Write a program to reverse the elements of a queue.
+   
+3. **Implement Stack using Queues**
+   - Implement a stack using two queues.
+   
+4. **Circular Queue Implementation**
+   - Implement a circular queue with fixed size using an array.
+   
+5. **Interleave First Half and Second Half of a Queue**
+   - Given a queue of integers, interleave the first half of the queue with the second half.
+   
+6. **First Non-Repeating Character in a Stream**
+   - Given a stream of characters, find the first non-repeating character at any point in the stream using a queue.
+   
+7. **Sliding Window Maximum**
+   - Given an array and an integer `k`, find the maximum element in each sliding window of size `k` using a deque (double-ended queue).
+   
+8. **Implement Deque (Double-Ended Queue)**
+   - Implement a deque with operations `insertFront`, `insertRear`, `deleteFront`, `deleteRear`, and checking if the deque is empty or full.
+
+---
+</details>
 
 </details>
 
