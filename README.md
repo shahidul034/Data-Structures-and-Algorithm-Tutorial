@@ -604,7 +604,7 @@ int main() {
 
 ```
 
-### Stack Applications:
+### ✅Stack Applications:
 
 - Expression evaluation (infix to postfix)
 
@@ -612,7 +612,7 @@ int main() {
 
 - Function call management in recursion
 
-### Queue Applications:
+### ✅Queue Applications:
 
 - CPU scheduling
 
@@ -624,7 +624,7 @@ int main() {
  
 <summary>🚩Questions and Home works </summary>
  
-### Stack Practice Questions
+### ✅Stack Practice Questions
 
 1. **Reverse a String using Stack**
    - Write a program to reverse a string using a stack.
@@ -652,7 +652,7 @@ int main() {
 
 ---
 
-#### Queue Practice Questions
+#### ✅Queue Practice Questions
 
 1. **Generate Binary Numbers**
    - Given a number `n`, generate and print binary numbers from 1 to `n` using a queue.
