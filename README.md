@@ -5,8 +5,8 @@
 | 1 | ✔[Installation and Introduction to Datatypes, Arrays, Pointers, Structures, and Class](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab-1) |
 | 2 | ✔[STL (Standard Template Library)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab-2) |
 | 3 | ✔[Stacks and Queues](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab-3) |
-| 4 | ⏳Linked Lists (Part 1) |
-| 5 | ⏳Linked Lists (Part 2) |
+| 4 | ✔[Linked Lists (Part 1)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial?tab=readme-ov-file#lab-4)|
+| 5 | ✔[Linked Lists (Part 2)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial?tab=readme-ov-file#lab-5) |
 | 6 | ⏳Sorting |
 | 7 | ⏳Graphs|
 | 8 | ⏳Trees |
@@ -31,7 +31,7 @@
 -->
 <details>
  
-<summary><h2><i>👉Lab 1</i></h2></summary>
+<summary><h2><i>👉Lab 1 - Installation and Introduction to Datatypes, Arrays, Pointers, Structures, and Class</i></h2></summary>
  
 ## 🚀Installation
 ⬇️[Codeblocks](https://www.codeblocks.org/downloads/binaries/)
@@ -197,7 +197,7 @@ cout<<p1.name<<endl;
 </details>
 
 <details>
-<summary><h2><i>👉Lab 2</i></h2></summary>
+<summary><h2><i>👉Lab 2 - STL (Standard Template Library)</i></h2></summary>
  
 ## 🎯C++ Standard Template Library (STL) Tutorial 
 The Standard Template Library (STL) in C++ is a powerful library that provides data structures and algorithms to help you efficiently store and manipulate data. Here's a basic introduction to some of the most commonly used components in the STL, focusing only on the most important and regularly used functions.
@@ -466,7 +466,7 @@ int main() {
 </details>
 
 <details>
-<summary><h2><i>👉Lab 3</i></h2></summary>
+<summary><h2><i>👉Lab 3 - Stacks and Queues</i></h2></summary>
  
 ## 🎯Stacks
 A Stack follows the LIFO (Last In First Out) principle. This means that the last element inserted into the stack is the first one to be removed. Imagine a stack of plates; the last plate placed on top is the first to be removed.
@@ -714,9 +714,9 @@ int main() {
 </details>
 
 <details>
-<summary><h2><i>👉Lab 4</i></h2></summary>
+<summary><h2><i>👉Lab 4 - Linked Lists (Part 1)</i></h2></summary>
 
-### What is a Linked List?
+### ✅What is a Linked List?
 A linked list is a dynamic data structure that consists of a sequence of nodes. Each node contains two parts:
 
 - `Data`: Stores the value.
@@ -724,19 +724,19 @@ A linked list is a dynamic data structure that consists of a sequence of nodes. 
 
 Unlike arrays, linked lists are dynamic and can grow or shrink in size without reallocating memory, making them more efficient for operations like insertion and deletion.
 
-### Types of Linked Lists
+### ✅Types of Linked Lists
 
 - `Singly Linked List`: Each node points to the next node in the sequence.
 - `Doubly Linked List`: Each node points to both the next and previous nodes.
 - `Circular Linked List`: The last node points back to the first node.
 
-### Basic Operations on a Linked List
+### ✅Basic Operations on a Linked List
 - `Inserting a Node`: Add a new node to the list.
 - `Deleting a Node`: Remove a node from the list.
 - `Traversing the List`: Visit all nodes to access their values.
 - `Searching a Node`: Find a node with a given value.
 
-### In this code
+### ✅In this code
  
 `Allocation`: Dynamically allocate memory for a new node and insert it at the end.
 
@@ -744,11 +744,11 @@ Unlike arrays, linked lists are dynamic and can grow or shrink in size without r
 
 `Traversal`: Visit all nodes to access and print their values.
 
-### Basic pointers information
+### ✅Basic pointers information
 - `head` points to the first node.
 - `temp` helps traverse the list or store temporary positions.
 
-### Structure of a Node
+### ✅Structure of a Node
 ```c
 #include <iostream>
 using namespace std;
@@ -762,7 +762,7 @@ public:
 ```
 node *head = NULL, *temp;  // Global pointers to manage the list
 ```
-### Allocation Function
+### ✅Allocation Function
 The `allocation` function creates a new node with a given value and inserts it at the end of the linked list. If the list is empty, the new node becomes the head.
 ```c
 int allocation(int item) {
@@ -780,7 +780,7 @@ int allocation(int item) {
 }
 
 ```
-### Traversal Function
+### ✅Traversal Function
 
 The `traverse` function iterates through the linked list and prints the value of each node.
 ```c
@@ -794,7 +794,7 @@ int traverse() {
 }
 
 ```
-### Main Function
+### ✅Main Function
 The `main()` function demonstrates how to use the `allocation` and `traverse` functions to build and display the linked list.
 ```c
 int main() {
@@ -815,8 +815,8 @@ int main() {
 </details>
 
 <details>
-<summary><h2><i>👉Lab 5</i></h2></summary>
-### Inserting a Node at the Beginning
+<summary><h2><i>👉Lab 5 - Linked Lists (Part 2)</i></h2></summary>
+### ✅Inserting a Node at the Beginning
 To insert a node at the beginning of the list, we simply adjust the pointer of the new node to point to the current head, and then update the head to point to the new node.
 
 ```c
@@ -828,7 +828,7 @@ int insert_first(int data) {
 }
 
 ```
-###  Inserting a Node at the End
+###  ✅Inserting a Node at the End
 To insert a node at the end of the list, we traverse to the last node and then link the new node to it.
 ```c
 int insert_last(int data) {
@@ -846,7 +846,7 @@ int insert_last(int data) {
 }
 
 ```
-### Inserting a Node After a Given Node
+### ✅Inserting a Node After a Given Node
 To insert a node after a given node, we traverse the list until we find the node with the desired value, and then adjust the pointers to insert the new node.
 ```c
 int after_insert_item(int data, int item) {
@@ -865,7 +865,7 @@ int after_insert_item(int data, int item) {
 }
 
 ```
-### Deleting a Node with a Given Value
+### ✅Deleting a Node with a Given Value
 To delete a node with a given value, we traverse the list until we find the node. We then unlink it from the list and free the memory.
 
 ```c
@@ -888,7 +888,7 @@ int deletion_given_item(int data) {
 }
 
 ```
-### Main Function
+### ✅Main Function
 ```c
 int main() {
     int n;
