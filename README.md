@@ -816,6 +816,7 @@ int main() {
 
 <details>
 <summary><h2><i>👉Lab 5 - Linked Lists (Part 2)</i></h2></summary>
+	
 ### ✅Inserting a Node at the Beginning
 To insert a node at the beginning of the list, we simply adjust the pointer of the new node to point to the current head, and then update the head to point to the new node.
 
