@@ -545,6 +545,46 @@ int main() {
 }
 
 ```
+### ✅Stack Applications:
+
+- Expression evaluation (infix to postfix)
+
+- Backtracking algorithms (e.g., maze solving)
+
+- Function call management in recursion
+
+<details>
+ 
+<summary><h2><i>🚩Questions</i></h2></summary>
+ 
+### Stack Practice Questions
+
+1. **Reverse a String using Stack**
+   - Write a program to reverse a string using a stack.
+   
+2. **Balanced Parentheses**
+   - Given an expression string with parentheses `(` and `)`, check whether the parentheses are balanced or not using a stack.
+   
+3. **Evaluate Postfix Expression**
+   - Write a program to evaluate a postfix expression (e.g., `231*+9-` equals `-4`).
+   
+4. **Sort a Stack**
+   - Given a stack, write a program to sort its elements using recursion (you can only use stack operations like push, pop, etc.).
+   
+5. **Next Greater Element**
+   - Given an array, for each element, find the next greater element. The next greater element is the first larger number to the right of the current element using a stack.
+
+6. **Implement Two Stacks in an Array**
+   - Implement two stacks in a single array without wasting space.
+
+7. **Stock Span Problem**
+   - Write a program to calculate the span of stock’s price for all days using a stack. The stock span on a given day is defined as the maximum number of consecutive days the stock price was less than or equal to the current price.
+
+8. **Min Stack**
+   - Design a stack that supports `push`, `pop`, `top`, and retrieving the minimum element in constant time.
+
+</details>
+
 ## 🎯Queues
 A Queue follows the FIFO (First In First Out) principle. The first element inserted into the queue is the first one to be removed. Think of a queue in a supermarket where the first customer in line is served first.
 
@@ -630,13 +670,6 @@ int main() {
 
 ```
 
-### ✅Stack Applications:
-
-- Expression evaluation (infix to postfix)
-
-- Backtracking algorithms (e.g., maze solving)
-
-- Function call management in recursion
 
 ### ✅Queue Applications:
 
@@ -650,34 +683,6 @@ int main() {
  
 <summary><h2><i>🚩Questions</i></h2></summary>
  
-### Stack Practice Questions
-
-1. **Reverse a String using Stack**
-   - Write a program to reverse a string using a stack.
-   
-2. **Balanced Parentheses**
-   - Given an expression string with parentheses `(` and `)`, check whether the parentheses are balanced or not using a stack.
-   
-3. **Evaluate Postfix Expression**
-   - Write a program to evaluate a postfix expression (e.g., `231*+9-` equals `-4`).
-   
-4. **Sort a Stack**
-   - Given a stack, write a program to sort its elements using recursion (you can only use stack operations like push, pop, etc.).
-   
-5. **Next Greater Element**
-   - Given an array, for each element, find the next greater element. The next greater element is the first larger number to the right of the current element using a stack.
-
-6. **Implement Two Stacks in an Array**
-   - Implement two stacks in a single array without wasting space.
-
-7. **Stock Span Problem**
-   - Write a program to calculate the span of stock’s price for all days using a stack. The stock span on a given day is defined as the maximum number of consecutive days the stock price was less than or equal to the current price.
-
-8. **Min Stack**
-   - Design a stack that supports `push`, `pop`, `top`, and retrieving the minimum element in constant time.
-
----
-
 ### Queue Practice Questions
 
 1. **Generate Binary Numbers**
@@ -937,6 +942,52 @@ int main() {
 }
 
 ```
+
+<details>
+<summary><h2><i>🚩Questions</i></h2></summary>
+- Write a function to insert a node after a given value in the linked list.
+
+    - Input: LinkedList = `10 -> 20 -> 30`, Insert `25` after `20`.
+
+    - Expected Output: `10 -> 20 -> 25 -> 30`
+
+- Implement a function to insert a node before a given value in the linked list.
+
+    - Input: LinkedList = `10 -> 20 -> 30`, Insert `15` before `20`.
+
+    - Expected Output: `10 -> 15 -> 20 -> 30`
+
+-   Write a function to delete a node with a specific value from the linked list.
+
+    - Input: LinkedList = `10 -> 20 -> 30 -> 40`, Delete node `20`.
+
+    - Expected Output: `10 -> 30 -> 40`
+
+- Implement a function to delete the node after a given value.
+
+    - Input: LinkedList = `10 -> 20 -> 30 -> 40`, Delete node after `20`.
+
+    - Expected Output: `10 -> 20 -> 40`
+
+- Write a function to reverse the linked list.
+
+    - Input: LinkedList = `10 -> 20 -> 30`
+
+    - Expected Output: `30 -> 20 -> 10`
+
+- Write a function to search for a value in the linked list.
+
+    - Input: LinkedList = `10 -> 20 -> 30`, Search for `20`.
+
+    - Expected Output: True (`20` found in the list)
+
+- Write a function to delete the first node of a linked list.
+
+    - Input: LinkedList = `10 -> 20 -> 30`
+
+
+    - Expected Output: `20 -> 30`
+</details>
 
 </details>
 
