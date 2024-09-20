@@ -33,7 +33,7 @@
  
 <summary><h2><i>👉Lab 1 - Installation and Introduction to Datatypes, Arrays, Pointers, Structures, and Class</i></h2></summary>
  
-### 🚀Installation
+## 🚀Installation
 ⬇️[Codeblocks](https://www.codeblocks.org/downloads/binaries/)
 
 File: codeblocks-20.03mingw-setup.exe
@@ -41,51 +41,51 @@ File: codeblocks-20.03mingw-setup.exe
 ### ✅Primitive Data Types
  Data elements are arranged in a sequential manner.
  
-🟢 Integer: Whole numbers without a fractional part (e.g., -3, 0, 42).
+`Integer`: Whole numbers without a fractional part (e.g., -3, 0, 42).
 
-🟢 Floating-point: Numbers with a fractional part (e.g., 3.14, -0.001, 2.0).
+`Floating-point`: Numbers with a fractional part (e.g., 3.14, -0.001, 2.0).
 
-🟢 Character: A single character (e.g., 'a', 'Z', '9').
+`Character`: A single character (e.g., 'a', 'Z', '9').
 
-🟢 Boolean: Represents true or false values.
+`Boolean`: Represents true or false values.
 
-🟢 Byte: Typically a small integer ranging from 0 to 255.
+`Byte`: Typically a small integer ranging from 0 to 255.
 ### ✅Non-Primitive Data Types
  Data elements are not arranged in a sequential manner.
  
-🟢 Arrays: A collection of elements of the same type, stored in contiguous memory locations.
+`Arrays`: A collection of elements of the same type, stored in contiguous memory locations.
 
-🟢 Strings: A sequence of characters, often implemented as an array of characters.
+`Strings`: A sequence of characters, often implemented as an array of characters.
 
-🟢 Structures: A collection of variables of different data types under a single name.
+`Structures`: A collection of variables of different data types under a single name.
 
-🟢 Classes: In object-oriented programming, a blueprint for creating objects (instances).
+`Classes`: In object-oriented programming, a blueprint for creating objects (instances).
 ### ✅Linear Data Structures
-🟢 Arrays: Elements are stored in contiguous memory locations.
+`Arrays`: Elements are stored in contiguous memory locations.
 
-🟢 Linked Lists: Elements (nodes) are connected by pointers.
+`Linked Lists`: Elements (nodes) are connected by pointers.
 
-🟢 Stacks: LIFO (Last In First Out) structure where elements are added/removed from the top.
+`Stacks`: LIFO (Last In First Out) structure where elements are added/removed from the top.
 
-🟢 Queues: FIFO (First In First Out) structure where elements are added at the rear and removed from the front.
+`Queues`: FIFO (First In First Out) structure where elements are added at the rear and removed from the front.
 ### ✅Nonlinear Data Structures
-🟢 Trees: Hierarchical structure with a root node and child nodes (e.g., binary trees, AVL trees).
+`Trees`: Hierarchical structure with a root node and child nodes (e.g., binary trees, AVL trees).
 
-🟢 Graphs: Consist of vertices (nodes) connected by edges. Graphs can be directed or undirected.
+`Graphs`: Consist of vertices (nodes) connected by edges. Graphs can be directed or undirected.
 
-🟢 Heaps: A specialized tree-based structure that satisfies the heap property (e.g., max-heap, min-heap).
+`Heaps`: A specialized tree-based structure that satisfies the heap property (e.g., max-heap, min-heap).
 ### ✅Abstract Data Types (ADTs)
 An Abstract Data Type (ADT) is a type (or class) for objects whose behavior is defined by a set of values and a set of operations. ADTs specify what operations can be performed but not how these operations will be implemented. Examples of ADTs include:
 
-🟢 List: An ordered collection of elements with operations like insertion, deletion, and traversal.
+`List`: An ordered collection of elements with operations like insertion, deletion, and traversal.
 
-🟢 Stack: Operations include push, pop, and peek.
+`Stack`: Operations include push, pop, and peek.
 
-🟢 Queue: Operations include enqueue, dequeue, and peek.
+`Queue`: Operations include enqueue, dequeue, and peek.
 
-🟢 Map: A collection of key-value pairs with operations like insertion, deletion, and lookup.
+`Map`: A collection of key-value pairs with operations like insertion, deletion, and lookup.
 
-🟢 Set: A collection of unique elements with operations like insertion, deletion, and membership testing.
+`Set`: A collection of unique elements with operations like insertion, deletion, and membership testing.
 
 ### ✅ Basic array example
  
@@ -180,9 +180,9 @@ cout<<p1.name<<endl;
 ```
 <details>
 
-<summary>Questions and Home Works</summary>
+<summary>🚩Questions and Home Works</summary>
 
-### 🚩Question
+### Question
 1) Create a Student class that holds information about a student, including their name, roll number, and an array of grades for different subjects. Write methods to calculate and display the student's average grade and their highest grade.
 
 2) Create a BankAccount class that holds information about a bank account, such as account number, account holder name, and balance. Implement methods to deposit, withdraw, and display the account details. Use an array to manage multiple bank accounts.
@@ -198,7 +198,7 @@ cout<<p1.name<<endl;
 
 <details>
 <summary><h2><i>👉Lab 2 - STL (Standard Template Library)</i></h2></summary>
-🎯C++ Standard Template Library (STL) Tutorial
+## 🎯C++ Standard Template Library (STL) Tutorial
 The Standard Template Library (STL) in C++ is a powerful library that provides data structures and algorithms to help you efficiently store and manipulate data. Here's a basic introduction to some of the most commonly used components in the STL, focusing only on the most important and regularly used functions.
 
 ### ✅Vector
@@ -237,7 +237,7 @@ int main() {
 
 ```
 
-> #### Important Functions: 
+> #### Important Functions
 > * `push_back(value)`: Adds an element to the end of the vector.
 > * `pop_back()`: Removes the last element.
 > * `size()`: Returns the number of elements in the vector.
@@ -287,7 +287,7 @@ int main() {
 }
 
 ```
-> #### Important Functions: 
+> #### Important Functions
 > * `push(value)`: Pushes an element onto the stack.
 > * `pop()`: Removes the top element.
 > * `top()`: Returns the top element.
@@ -332,7 +332,7 @@ int main() {
     return 0;
 }
 ```
-> #### Important Functions: 
+> #### Important Functions
 > * `push(value)`: Adds an element to the queue.
 > * `pop()`: Removes the front element.
 > * `front()`: Returns the front element.
@@ -368,7 +368,7 @@ int main() {
 }
 
 ```
-> #### Important Functions:
+> #### Important Functions
 > * `insert(value)`: Inserts an element (if it’s not already present).
 > * `count(value)`: Checks if an element exists (returns 0 or 1).
 > * `erase(value)`: Removes an element.
@@ -405,7 +405,7 @@ int main() {
 }
 
 ```
-> #### Important Functions: 
+> #### Important Functions
 > * `[]`: Access or insert elements by key.
 > * `insert({key, value})`: Inserts a key-value pair.
 > * `find(key)`: Finds an element by key.
@@ -443,7 +443,7 @@ int main() {
 }
 
 ```
-> #### Important Functions: 
+> #### Important Functions
 > * `sort(start, end)`: Sorts the range [start, end).
 > * `reverse(start, end)`: Reverses the range [start, end).
 > * `binary_search(start, end, value)`: Checks if a value is present in a sorted range.
@@ -551,7 +551,7 @@ int main() {
 ## 🎯Queues
 A Queue follows the FIFO (First In First Out) principle. The first element inserted into the queue is the first one to be removed. Think of a queue in a supermarket where the first customer in line is served first.
 
-### ✅Operations on Queue:
+### ✅Operations on Queue
 
 `Enqueue`: Add an element to the end of the queue.
 
@@ -653,7 +653,7 @@ int main() {
  
 <summary>🚩Questions and Home works </summary>
  
-### ✅Stack Practice Questions
+### Stack Practice Questions
 
 1. **Reverse a String using Stack**
    - Write a program to reverse a string using a stack.
@@ -681,7 +681,7 @@ int main() {
 
 ---
 
-### ✅Queue Practice Questions
+### Queue Practice Questions
 
 1. **Generate Binary Numbers**
    - Given a number `n`, generate and print binary numbers from 1 to `n` using a queue.
@@ -811,6 +811,23 @@ int main() {
 }
 
 ```
+<details>
+<summary><h2><i>🚩Questions</i></h2></summary>
+	
+- Write a function to insert a node at the beginning of a linked list.
+	- Input: LinkedList = `10 -> 20 -> 30`, Inserting `5` at the beginning.
+	- Expected Output: `5 -> 10 -> 20 -> 30`
+- Implement a function to insert a node at the end of the linked list.
+    - Input: LinkedList = `10 -> 20 -> 30`, Inserting `40` at the end.
+    - Expected Output: `10 -> 20 -> 30 -> 40`
+- Write a function to traverse and print all elements of a linked list.
+    - Input: LinkedList = `10 -> 20 -> 30`
+    - Expected Output: `10 20 30`
+- Write a function to create a linked list from an array of values.
+    - Input: Array = `[5, 10, 15, 20]`
+    - Expected Output: LinkedList = `5 -> 10 -> 15 -> 20`
+</details>
+
 </details>
 
 <details>
@@ -923,23 +940,7 @@ int main() {
 }
 
 ```
-<details>
-<summary><h2><i>🚩Questions</i></h2></summary>
-	
-### Questions
-- Write a function to insert a node at the beginning of a linked list.
-	- Input: LinkedList = `10 -> 20 -> 30`, Inserting `5` at the beginning.
-	- Expected Output: `5 -> 10 -> 20 -> 30`
-- Implement a function to insert a node at the end of the linked list.
-    - Input: LinkedList = `10 -> 20 -> 30`, Inserting `40` at the end.
-    - Expected Output: `10 -> 20 -> 30 -> 40`
-- Write a function to traverse and print all elements of a linked list.
-    - Input: LinkedList = `10 -> 20 -> 30`
-    - Expected Output: `10 20 30`
-- Write a function to create a linked list from an array of values.
-    - Input: Array = `[5, 10, 15, 20]`
-    - Expected Output: LinkedList = `5 -> 10 -> 15 -> 20`
-</details>
+
 </details>
 
 
