@@ -37,7 +37,7 @@
 ⬇️[Codeblocks](https://www.codeblocks.org/downloads/binaries/)
 
 File: codeblocks-20.03mingw-setup.exe
-
+## 🎯Introduction to Datatypes, Arrays, Pointers, Structures and Class
 ### ✅Primitive Data Types
  Data elements are arranged in a sequential manner.
  
@@ -198,7 +198,7 @@ cout<<p1.name<<endl;
 
 <details>
 <summary><h2><i>👉Lab 2 - STL (Standard Template Library)</i></h2></summary>
- 
+🎯C++ Standard Template Library (STL) Tutorial
 The Standard Template Library (STL) in C++ is a powerful library that provides data structures and algorithms to help you efficiently store and manipulate data. Here's a basic introduction to some of the most commonly used components in the STL, focusing only on the most important and regularly used functions.
 
 ### ✅Vector
@@ -452,7 +452,7 @@ int main() {
 <details>
 
 <summary>🚩Question</summary>
-
+### Question
 1) **Problem Statement:** Given an array of integers, remove all the duplicate elements and return the unique elements in the same order as they first appeared.
 
 2) **Problem Statement:** Given a list of words, count the frequency of each word and return the results in a dictionary (map).
@@ -681,7 +681,7 @@ int main() {
 
 ---
 
-#### ✅Queue Practice Questions
+### ✅Queue Practice Questions
 
 1. **Generate Binary Numbers**
    - Given a number `n`, generate and print binary numbers from 1 to `n` using a queue.
