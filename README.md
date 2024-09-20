@@ -449,7 +449,7 @@ int main() {
 <details>
 
 <summary><h2><i>🚩Questions</i></h2></summary>
-### Question
+
 1) **Problem Statement:** Given an array of integers, remove all the duplicate elements and return the unique elements in the same order as they first appeared.
 
 2) **Problem Statement:** Given a list of words, count the frequency of each word and return the results in a dictionary (map).
@@ -557,8 +557,6 @@ int main() {
  
 <summary><h2><i>🚩Questions</i></h2></summary>
  
-### Stack Practice Questions
-
 1. **Reverse a String using Stack**
    - Write a program to reverse a string using a stack.
    
@@ -683,7 +681,6 @@ int main() {
  
 <summary><h2><i>🚩Questions</i></h2></summary>
  
-### Queue Practice Questions
 
 1. **Generate Binary Numbers**
    - Given a number `n`, generate and print binary numbers from 1 to `n` using a queue.
