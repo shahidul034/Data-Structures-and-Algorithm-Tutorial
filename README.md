@@ -33,11 +33,11 @@
  
 <summary><h2><i>👉Lab 1 - Installation and Introduction to Datatypes, Arrays, Pointers, Structures, and Class</i></h2></summary>
  
-## 🚀Installation
+### 🚀Installation
 ⬇️[Codeblocks](https://www.codeblocks.org/downloads/binaries/)
 
 File: codeblocks-20.03mingw-setup.exe
-## Introduction to Datatypes, Arrays, Pointers, Structures and Class
+
 ### ✅Primitive Data Types
  Data elements are arranged in a sequential manner.
  
@@ -182,12 +182,12 @@ cout<<p1.name<<endl;
 
 <summary>Questions and Home Works</summary>
 
-## 🚩Question
+### 🚩Question
 1) Create a Student class that holds information about a student, including their name, roll number, and an array of grades for different subjects. Write methods to calculate and display the student's average grade and their highest grade.
 
 2) Create a BankAccount class that holds information about a bank account, such as account number, account holder name, and balance. Implement methods to deposit, withdraw, and display the account details. Use an array to manage multiple bank accounts.
 
-## 📝 Home works
+### 📝 Home works
 
 1) Create a Book class that represents a book in a library. Each book has a title, author, ISBN, and availability status (whether the book is available or checked out). Create an array of books to represent the library and implement methods to check out a book, return a book, and display all available books.
 
@@ -199,7 +199,6 @@ cout<<p1.name<<endl;
 <details>
 <summary><h2><i>👉Lab 2 - STL (Standard Template Library)</i></h2></summary>
  
-## 🎯C++ Standard Template Library (STL) Tutorial 
 The Standard Template Library (STL) in C++ is a powerful library that provides data structures and algorithms to help you efficiently store and manipulate data. Here's a basic introduction to some of the most commonly used components in the STL, focusing only on the most important and regularly used functions.
 
 ### ✅Vector
