@@ -945,6 +945,7 @@ int main() {
 
 <details>
 <summary><h2><i>🚩Questions</i></h2></summary>
+	
 - Write a function to insert a node after a given value in the linked list.
 
     - Input: LinkedList = `10 -> 20 -> 30`, Insert `25` after `20`.
@@ -984,7 +985,6 @@ int main() {
 - Write a function to delete the first node of a linked list.
 
     - Input: LinkedList = `10 -> 20 -> 30`
-
 
     - Expected Output: `20 -> 30`
 </details>
