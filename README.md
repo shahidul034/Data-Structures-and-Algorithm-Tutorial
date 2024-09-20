@@ -923,9 +923,24 @@ int main() {
 }
 
 ```
-
+<details>
+<summary><h2><i>🚩Questions</i></h2></summary>
+	
+### Questions
+- Write a function to insert a node at the beginning of a linked list.
+	- Input: LinkedList = `10 -> 20 -> 30`, Inserting `5` at the beginning.
+	- Expected Output: `5 -> 10 -> 20 -> 30`
+- Implement a function to insert a node at the end of the linked list.
+    - Input: LinkedList = `10 -> 20 -> 30`, Inserting `40` at the end.
+    - Expected Output: `10 -> 20 -> 30 -> 40`
+- Write a function to traverse and print all elements of a linked list.
+    - Input: LinkedList = `10 -> 20 -> 30`
+    - Expected Output: `10 20 30`
+- Write a function to create a linked list from an array of values.
+    - Input: Array = `[5, 10, 15, 20]`
+    - Expected Output: LinkedList = `5 -> 10 -> 15 -> 20`
 </details>
-
+</details>
 
 
 
