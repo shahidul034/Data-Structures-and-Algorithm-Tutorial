@@ -180,18 +180,15 @@ cout<<p1.name<<endl;
 ```
 <details>
 
-<summary>🚩Questions and Home Works</summary>
+<summary><h2><i>🚩Questions</i></h2></summary>
 
-### Question
 1) Create a Student class that holds information about a student, including their name, roll number, and an array of grades for different subjects. Write methods to calculate and display the student's average grade and their highest grade.
 
 2) Create a BankAccount class that holds information about a bank account, such as account number, account holder name, and balance. Implement methods to deposit, withdraw, and display the account details. Use an array to manage multiple bank accounts.
 
-### 📝 Home works
+3) Create a Book class that represents a book in a library. Each book has a title, author, ISBN, and availability status (whether the book is available or checked out). Create an array of books to represent the library and implement methods to check out a book, return a book, and display all available books.
 
-1) Create a Book class that represents a book in a library. Each book has a title, author, ISBN, and availability status (whether the book is available or checked out). Create an array of books to represent the library and implement methods to check out a book, return a book, and display all available books.
-
-2) Create an Employee class that holds information about an employee, such as name, employee ID, department, and salary. Create an array of employees and implement methods to add a new employee, search for an employee by ID, and display all employees in a specific department.
+4) Create an Employee class that holds information about an employee, such as name, employee ID, department, and salary. Create an array of employees and implement methods to add a new employee, search for an employee by ID, and display all employees in a specific department.
 
 </details>
 </details>
@@ -451,7 +448,7 @@ int main() {
 
 <details>
 
-<summary>🚩Question</summary>
+<summary><h2><i>🚩Questions</i></h2></summary>
 ### Question
 1) **Problem Statement:** Given an array of integers, remove all the duplicate elements and return the unique elements in the same order as they first appeared.
 
@@ -651,7 +648,7 @@ int main() {
 
 <details>
  
-<summary>🚩Questions and Home works </summary>
+<summary><h2><i>🚩Questions</i></h2></summary>
  
 ### Stack Practice Questions
 
