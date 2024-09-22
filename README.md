@@ -195,6 +195,7 @@ cout<<p1.name<<endl;
 
 <details>
 <summary><h2><i>👉Lab 2 - STL (Standard Template Library)</i></h2></summary>
+	
 ## 🎯C++ Standard Template Library (STL) Tutorial
 The Standard Template Library (STL) in C++ is a powerful library that provides data structures and algorithms to help you efficiently store and manipulate data. Here's a basic introduction to some of the most commonly used components in the STL, focusing only on the most important and regularly used functions.
 
