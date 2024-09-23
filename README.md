@@ -989,5 +989,36 @@ int main() {
 
 </details>
 
+<details>
+<summary><h2><i>👀Miscellaneous code</i></h2></summary>
+	
+## 💡Random Number generation
 
+```
+#include <iostream>
+#include <cstdlib>  // for rand() and srand()
+#include <ctime>    // for time()
+using namespace std;
+// Function to return a random number in a given range [min, max]
+int getRandomNumber(int min, int max) {
+    // Ensure that the range is valid
+    if (min > max) {
+        cerr << "Invalid range" << endl;
+        return -1;  // or throw an exception
+    }
+    
+    // Initialize random seed based on the current time
+    srand(static_cast<unsigned int>(time(nullptr)));
+    
+    // Generate a random number between min and max
+    return min + rand() % ((max - min) + 1);
+}
+
+int main() {
+    int min = 1, max = 100;
+    int randomNum = getRandomNumber(min, max);
+    cout << "Random number between " << min << " and " << max << ": " << randomNum << endl;
+}
+```
+</details>
 
