@@ -793,21 +793,83 @@ int traverse() {
 }
 
 ```
+### ✅Inserting a Node at the Beginning
+To insert a node at the beginning of the list, we simply adjust the pointer of the new node to point to the current head, and then update the head to point to the new node.
+
+```c
+void insert_first(int data){
+    node *ptr=new node();
+    ptr->info=data;
+    ptr->link=head;
+    head=ptr;
+}
+
+```
+###  ✅Inserting a Node at the End
+To insert a node at the end of the list, we traverse to the last node and then link the new node to it.
+```c
+void insert_last(int data){
+    node *ptr=new node();
+    ptr->info=data;
+    node *srt=head;
+    while(srt->link!=NULL){
+        srt=srt->link;
+    }
+    srt->link=ptr;
+    ptr->link=NULL;
+}
+
+```
+### ✅Inserting a Node After a Given Node
+To insert a node after a given node, we traverse the list until we find the node with the desired value, and then adjust the pointers to insert the new node.
+```c
+void insert_node_after_item(int search,int data){
+    node *ptr=new node();
+    ptr->info=data;
+    node *srt=head;
+    while(srt->info!=search){
+        srt=srt->link;
+    }
+    ptr->link=srt->link;
+    srt->link=ptr;
+}
+
+```
+### ✅Inserting a Node before a Given Node
+To insert a node before a given node, we traverse the list until we find the node with the desired value, and then adjust the pointers to insert the new node.
+```c
+void insert_node_before_item(int search, int data){
+    node *ptr=new node();
+    ptr->info=data;
+    node *srt=head,*temp;
+    
+    while(srt->info!=search){
+        temp=srt;
+        srt=srt->link;
+    }
+    temp->link=ptr;
+    ptr->link=srt;
+}
+
+```
 ### ✅Main Function
 The `main()` function demonstrates how to use the `allocation` and `traverse` functions to build and display the linked list.
 ```c
 int main() {
-    int n;
-    cin >> n;  // Read the number of nodes
 
-    for (int i = 0; i < n; i++) {
-        int b;
-        cin >> b;            // Input the node value
-        allocation(b);       // Insert the node
-    }
-
-    traverse();  // Display the list
-    return 0;
+	allocation(10);
+	allocation(20);
+	allocation(30);
+	traverse(); //10 20 30 
+	insert_first(9);
+	traverse();//9 10 20 30 
+	insert_last(31);
+	traverse();//9 10 20 30 31 
+	insert_node_after_item(20, 25);
+	traverse();//9 10 20 25 30 31 
+	insert_node_before_item(30,27);
+	traverse();//9 10 20 25 27 30 31 
+	return 0;
 }
 
 ```
@@ -833,55 +895,7 @@ int main() {
 <details>
 <summary><h2><i>👉Lab 5 - Linked Lists (Part 2)</i></h2></summary>
 	
-### ✅Inserting a Node at the Beginning
-To insert a node at the beginning of the list, we simply adjust the pointer of the new node to point to the current head, and then update the head to point to the new node.
 
-```c
-int insert_first(int data) {
-    node *ptr = new node();  // Allocate a new node
-    ptr->info = data;        // Set the data
-    ptr->link = head;        // Link the new node to the current head
-    head = ptr;              // Update head to the new node
-}
-
-```
-###  ✅Inserting a Node at the End
-To insert a node at the end of the list, we traverse to the last node and then link the new node to it.
-```c
-int insert_last(int data) {
-    node *ptr = new node();  // Allocate a new node
-    ptr->info = data;
-    ptr->link = NULL;        // The new node will be the last node
-
-    if (head == NULL) {
-        head = ptr;          // If the list is empty, make this the first node
-    } else {
-        node *srt = head;
-        while (srt->link != NULL) srt = srt->link;  // Traverse to the last node
-        srt->link = ptr;                            // Link the last node to the new node
-    }
-}
-
-```
-### ✅Inserting a Node After a Given Node
-To insert a node after a given node, we traverse the list until we find the node with the desired value, and then adjust the pointers to insert the new node.
-```c
-int after_insert_item(int data, int item) {
-    node *ptr = new node();  // Allocate a new node
-    ptr->info = item;
-
-    node *srt = head;
-    while (srt != NULL) {
-        if (srt->info == data) {
-            ptr->link = srt->link;  // Link the new node to the next node
-            srt->link = ptr;        // Link the current node to the new node
-            break;
-        }
-        srt = srt->link;
-    }
-}
-
-```
 ### ✅Deleting a Node with a Given Value
 To delete a node with a given value, we traverse the list until we find the node. We then unlink it from the list and free the memory.
 
@@ -905,6 +919,8 @@ int deletion_given_item(int data) {
 }
 
 ```
+### ✅Deleting a Node after with a Given Value
+### ✅Deleting a Node before with a Given Value
 ### ✅Main Function
 ```c
 int main() {
