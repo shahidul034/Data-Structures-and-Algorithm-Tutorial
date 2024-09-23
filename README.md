@@ -841,13 +841,13 @@ To insert a node before a given node, we traverse the list until we find the nod
 void insert_node_before_item(int search, int data){
     node *ptr=new node();
     ptr->info=data;
-    node *srt=head,*temp;
+    node *srt=head,*prev;
     
     while(srt->info!=search){
-        temp=srt;
+        prev=srt;
         srt=srt->link;
     }
-    temp->link=ptr;
+    prev->link=ptr;
     ptr->link=srt;
 }
 
@@ -934,23 +934,7 @@ int main() {
 
     traverse();
 
-    int data;
-    cin >> data;
-    insert_first(data);      // Insert node at the beginning
-    traverse();
-
-    cin >> data;
-    insert_last(data);       // Insert node at the end
-    traverse();
-
-    int item;
-    cin >> data >> item;
-    after_insert_item(data, item);  // Insert node after a given node
-    traverse();
-
-    cin >> data;
-    deletion_given_item(data);  // Delete a node
-    traverse();
+    
 
     return 0;
 }
