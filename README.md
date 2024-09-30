@@ -895,50 +895,116 @@ int main() {
 <details>
 <summary><h2><i>👉Lab 5 - Linked Lists (Part 2)</i></h2></summary>
 	
-
-### ✅Deleting a Node with a Given Value
-To delete a node with a given value, we traverse the list until we find the node. We then unlink it from the list and free the memory.
-
+### ✅Delete first node
 ```c
-int deletion_given_item(int data) {
-    node *srt = head, *prev = NULL;
-
-    while (srt != NULL) {
-        if (srt->info == data) {
-            if (prev == NULL) {
-                head = srt->link;  // If it's the head node, update the head
-            } else {
-                prev->link = srt->link;  // Unlink the node
-            }
-            delete srt;  // Free the memory
-            break;
-        }
-        prev = srt;
-        srt = srt->link;
+void delete_first_node()
+{
+    if (head==NULL)
+    {
+        cout<<"Linked list is empty!!!"<<endl;
     }
+    else
+        head=head->link;
 }
-
 ```
-### ✅Deleting a Node after with a Given Value
-### ✅Deleting a Node before with a Given Value
+### ✅Delete last node
+```c
+void delete_last_node()
+{
+    if (head==NULL){
+        cout<<"Linked list is empty!!!"<<endl;
+    }
+    node *srt=head,*temp;
+    while(srt->link!=NULL)
+    {
+        temp=srt;
+        srt=srt->link;
+    }
+    temp->link=NULL;
+}
+```
+### ✅Deleting a node with a given value 
+```c
+void delete_given_node(int search)
+{
+    if (head->info==search)
+    {
+        delete_first_node();
+        return;
+    }
+    node *srt=head,*temp;
+    while(srt->info!=search)
+    {
+        temp=srt;
+        srt=srt->link;
+    }
+    temp->link=srt->link;
+
+}
+```
+### ✅Deleting a node before a given value
+```c
+void delete_before_given_node(int search)
+{
+    if (head->info==search)
+    {
+        cout<<"It is the first node!!"<<endl;
+        return;
+    }
+    node *srt=head,*temp;
+    while(srt->info!=search)
+    {
+        temp=srt;
+        srt=srt->link;
+    }
+    delete_given_node(temp->info);
+}
+```
+### ✅Deleting a node after a given value
+```c
+void delete_after_given_node(int search)
+{
+    node *srt=head,*temp;
+    while(srt->info!=search and srt->link!=NULL)
+    {
+        temp=srt;
+        srt=srt->link;
+    }
+    if (srt->link==NULL)
+    {
+        cout<<"It is the last node!!!"<<endl;
+        return;
+    }
+    delete_given_node(srt->link->info);
+}
+```
 ### ✅Main Function
 ```c
-int main() {
-    int n;
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        int b;
-        cin >> b;
-        allocation(b);       // Insert nodes at the end
-    }
+int main()
+{
 
+    allocation(10);
+    allocation(20);
+    allocation(30);
+    allocation(40);
+    allocation(50);
+    allocation(60);
+    allocation(70);
+    allocation(80);
+    delete_first_node();
+    traverse();
+    delete_last_node();
+    traverse();
+    delete_given_node(40);//delete 40
+    traverse();
+    delete_before_given_node(50);//delete 30
+    traverse();
+    delete_after_given_node(60);//delete 70
+    delete_after_given_node(80);
+    delete_before_given_node(20);
     traverse();
 
-    
-
-    return 0;
 }
-
 ```
 
 <details>
