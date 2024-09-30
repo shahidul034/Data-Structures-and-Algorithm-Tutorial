@@ -1060,7 +1060,7 @@ int main()
 	
 ## 💡Random Number generation
 
-```
+```c
 #include <iostream>
 #include <cstdlib>  // for rand() and srand()
 #include <ctime>    // for time()
@@ -1087,4 +1087,17 @@ int main() {
 }
 ```
 </details>
+
+## Citation
+
+```c
+@misc{Salim2024,
+  author = {Salim, Md. Shahidul},
+  title = {Data Structures and Algorithm Tutorial},
+  year = {2024},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial}},
+}
+```
 
