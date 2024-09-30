@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below." 
+authors:
+- family-names: "Salim"
+  given-names: "Md. Shahidul"
+  google_scholar: "https://scholar.google.com/citations?user=Ob2Nw7oAAAAJ&hl"
+title: "Data Structures and Algorithm Tutorial"
+url: "https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial"
