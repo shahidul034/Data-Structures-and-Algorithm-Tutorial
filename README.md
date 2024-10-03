@@ -3,16 +3,17 @@
 | #Lab  | Topics name |
 | ------------- | ------------- |
 | 1 | ✔[Installation and Introduction to Datatypes, Arrays, Pointers, Structures, and Class](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab1.md) |
-| 2 | ✔[STL (Standard Template Library)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab-2) |
-| 3 | ✔[Stacks and Queues](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab-3) |
-| 4 | ✔[Linked Lists (Part 1)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial?tab=readme-ov-file#lab-4)|
-| 5 | ✔[Linked Lists (Part 2)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial?tab=readme-ov-file#lab-5) |
+| 2 | ✔[STL (Standard Template Library)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab2.md) |
+| 3 | ✔[Stacks and Queues](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab3.md) |
+| 4 | ✔[Linked Lists (Part 1)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab4.md)|
+| 5 | ✔[Linked Lists (Part 2)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab5.md) |
 | 6 | ⏳Graphs |
 | 7 | ⏳Sorting|
 | 8 | ⏳Trees |
 | 9 | ⏳Backtracking and Greedy |
 | 10 | ⏳Hashing |
 | 11 | ⏳Dynamic Programming |
+
 > [!TIP]
 > Click below to expand the sections.
 
@@ -197,7 +198,6 @@ cout<<p1.name<<endl;
 <details>
 <summary><h2><i>👉Lab 2 - STL (Standard Template Library)</i></h2></summary>
 	
-## 🎯C++ Standard Template Library (STL) Tutorial
 The Standard Template Library (STL) in C++ is a powerful library that provides data structures and algorithms to help you efficiently store and manipulate data. Here's a basic introduction to some of the most commonly used components in the STL, focusing only on the most important and regularly used functions.
 
 ### ✅Vector
