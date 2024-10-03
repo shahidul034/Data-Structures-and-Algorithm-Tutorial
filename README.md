@@ -7,8 +7,8 @@
 | 3 | ✔[Stacks and Queues](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/README.md#lab-3) |
 | 4 | ✔[Linked Lists (Part 1)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial?tab=readme-ov-file#lab-4)|
 | 5 | ✔[Linked Lists (Part 2)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial?tab=readme-ov-file#lab-5) |
-| 6 | ⏳Sorting |
-| 7 | ⏳Graphs|
+| 6 | ⏳Graphs |
+| 7 | ⏳Sorting|
 | 8 | ⏳Trees |
 | 9 | ⏳Backtracking and Greedy |
 | 10 | ⏳Hashing |
