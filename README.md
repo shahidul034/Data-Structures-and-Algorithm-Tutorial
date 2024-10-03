@@ -29,6 +29,7 @@
 - [ ] Lab10: Backtracking and Greedy
 - [ ] Lab11: Hashing
 -->
+
 <details>
  
 <summary><h2><i>👉Lab 1 - Installation and Introduction to Datatypes, Arrays, Pointers, Structures, and Class</i></h2></summary>
