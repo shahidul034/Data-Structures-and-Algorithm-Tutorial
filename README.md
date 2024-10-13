@@ -7,7 +7,7 @@
 | 3 | ✔[Stacks and Queues](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab3.md) |
 | 4 | ✔[Linked Lists (Part 1)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab4.md)|
 | 5 | ✔[Linked Lists (Part 2)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab5.md) |
-| 6 | ⏳Graphs |
+| 6 | ✔[Graphs](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab6.md) |
 | 7 | ⏳Sorting|
 | 8 | ⏳Trees |
 | 9 | ⏳Backtracking and Greedy |
