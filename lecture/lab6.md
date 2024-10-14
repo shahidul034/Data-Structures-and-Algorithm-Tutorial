@@ -283,7 +283,7 @@ dis[v] = dis[u] + cost[u][v]
 ```
 #### Simple implementation using BFS
 ```c
-void dijkstra(int start,int node,vector<int>vec[100],map<int,int>cost,infinity)
+void dijkstra(int start,int node,vector<int>vec[],map<int,int>cost,infinity)
 {
     map<int, int> dis; // Maps to track visited nodes and their distances
     for(int i=1;i<=node;i++)dis[i]=infinity;
@@ -342,7 +342,7 @@ This is a custom comparator that is used to implement a min-heap using C++’s `
 
 ##### Dijkstra’s Algorithm Implementation using priority queue
 ```c
-void dijaktra(int start,int node, vector<int>vec[100],map<int,int>cost, int inf) {
+void dijaktra(int start,int node, vector<int>vec[],map<int,int>cost, int inf) {
     priority_queue<pair<int, int>, vector<pair<int, int>>, compare> priorQ;
     map<int,int>dis;
     // Initialize all distances to infinity
