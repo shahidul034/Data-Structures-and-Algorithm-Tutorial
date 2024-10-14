@@ -50,10 +50,10 @@ int main() {
 
 ```
 #### Input Example
-![Adj matrix input](images/graph1.png)
+![Adj matrix input](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/images/graph1.png/?raw=true)
 
 #### Output Example
-![Adj matrix output](images/graph2.png)
+![Adj matrix output](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/images/graph2.png/?raw=true)
 
 ### ✅Input Graph as an Adjacency List
 An adjacency list is a more space-efficient way to represent a sparse graph. Each vertex stores a list of all the vertices it is connected to.
@@ -99,9 +99,9 @@ int main() {
 
 ```
 #### Input Example
-![adj list in graph](images/graph3.png)
+![adj list in graph](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/images/graph3.png/?raw=true)
 #### Output Example
-![adj list in graph](images/graph4.png)
+![adj list in graph](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/images/graph4.png/?raw=true)
 ### Input Graph as an Edge List
 In an edge list, the graph is represented by a list of all edges, where each edge is a pair of vertices.
 ```c
@@ -140,9 +140,9 @@ int main() {
 
 ```
 #### Input Example
-![edge list in graph](images/graph5.png)
+![edge list in graph](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/images/graph5.png/?raw=true)
 #### Output Example
-![edge list in graph](images/graph6.png)
+![edge list in graph](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/images/graph6.png/?raw=true)
 - `Adjacency Matrix`: Best for dense graphs where most vertices are connected.
 - `Adjacency List`: Best for sparse graphs to save space.
 - `Edge List:` Useful for specific algorithms where edge traversal is key.
@@ -183,10 +183,10 @@ void bfs(int start)
 }
 
 ```
-- Visited Map: Keeps track of the nodes that have been visited during the BFS.
+- `Visited Map`: Keeps track of the nodes that have been visited during the BFS.
 Label 
-- Map: Stores the distance (number of edges) from the start node to each node.
-- Queue: Used to explore nodes level by level. BFS explores all neighbors of a node before moving on to the next level of nodes.
+- `Map`: Stores the distance (number of edges) from the start node to each node.
+- `Queue`: Used to explore nodes level by level. BFS explores all neighbors of a node before moving on to the next level of nodes.
 #### Main Function
 ```c
 int main()
@@ -268,7 +268,19 @@ int main() {
 
 ```
 ### Dijkstra's algorithm
-![Dijkstra's algorithm](images/dij.png)
+
+| ![Dijkstra's algorithm](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/images/dij.png/?raw=true) | 
+|:--:| 
+| *Courtesy: shafaetsplanet* |
+
+Update the path
+| ![Dijkstra's algorithm](http://www.shafaetsplanet.com/planetcoding/wp-content/uploads/2013/04/dijkstra26.png) | 
+|:--:| 
+| *Courtesy: shafaetsplanet* |
+```c
+if dis[u] + cost[u][v] < dis[v]:
+dis[v] = dis[u] + cost[u][v]
+```
 #### Simple implementation using BFS
 ```c
 void dijkstra(int start,int node,vector<int>vec[100],map<int,int>cost,infinity)
@@ -312,7 +324,6 @@ int main()
         cost[a][b]=c;
     }
     dijkstra(1,node,vec,cost,maxInt);
-    
 }
 
 ```
