@@ -328,6 +328,7 @@ int main()
     dijkstra(1,node,vec,cost);
 }
 ```
+[Full code](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/code/dijkstra%20using%20bfs.cpp)
 #### Dijkstra’s Algorithm using Priority Queue
 ##### Comparator Class for Priority Queue
 ```c
@@ -401,6 +402,7 @@ int main()
 }
 
 ```
+[Full code](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/code/dijkstra%20using%20priority%20queue.cpp)
 
 ### Bellman-Ford algorithm
 The Bellman-Ford algorithm is used to find the shortest paths from a source node to all other nodes in a weighted graph, even if the graph contains edges with negative weights. The algorithm also detects negative-weight cycles, where the total weight of a cycle is negative, which would imply the shortest path cannot be determined as the path could keep reducing indefinitely.
@@ -480,7 +482,86 @@ int main()
 
 ```
 
+[Full code](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/code/bellmanford.cpp)
+### Floyd warshall algorithm
+| ![floyd warshall algorithm](https://www.shafaetsplanet.com/planetcoding/wp-content/uploads/2014/07/floyed1.png) | 
+|:--:| 
+| *Courtesy: shafaetsplanet* |
+The Floyd-Warshall algorithm computes the shortest paths between all pairs of nodes.
+```c
+int floyedwarshell(int n)
+{
+    for(int k=1; k<=n; k++)
+    {
+        for(int i=1; i<=n; i++)
+        {
+            for(int j=1; j<=n; j++)
+            {
+                mat[i][j]=min((mat[i][k]+mat[k][j]),mat[i][j]);
+            }
+        }
+    }
+}
+```
 
+Initializes the mat array. If `i == j`, the distance from a node to itself is `0`. For `i != j`, the distance is set to infinity (`inf`), indicating no direct edge. 
+
+```c
+    for(int i=1; i<=node; i++)
+    {
+        for(int j=1; j<=node; j++)
+            if(i!=j)
+                mat[i][j]=inf;
+            else
+                mat[i][j]=0;
+    }
+```
+#### Main function
+```c
+int main()
+{
+    freopen("in_floyed_warshell.txt","r",stdin);
+    int node;
+    cin>>node;
+    int a,b,c;
+    for(int i=1; i<=node; i++)
+    {
+        for(int j=1; j<=node; j++)
+            if(i!=j)
+                mat[i][j]=inf;
+            else
+                mat[i][j]=0;
+    }
+
+    while(cin>>a>>b>>c)
+    {
+        mat[a][b]=c;
+    }
+    cout<<"Initial Matrix: "<<endl;
+    for(int i=1; i<=node; i++)
+    {
+        for(int j=1; j<=node; j++)
+        {
+            cout<<mat[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    cout<<endl;
+    floyedwarshell(node);
+    cout<<"After applying floyed warshell: "<<endl;
+    for(int i=1; i<=node; i++)
+    {
+        for(int j=1; j<=node; j++)
+        {
+            cout<<mat[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+```
+
+[Full code](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/code/floyed_warshell.cpp)
 <h2><i>🚩Questions</i></h2>
 
 1. Connected Components (BFS/DFS)
@@ -499,6 +580,10 @@ int main()
 - Output: Print `"Yes"` if there is a cycle, otherwise print `"No"`.
 - Hint: Use DFS and track the parent of each node. If a visited node is encountered that is not the parent of the current node, a cycle is found.
 4. Topological Sorting (DFS)
+
+| ![Bellman-Ford algorithm](https://www.shafaetsplanet.com/planetcoding/wp-content/uploads/2011/10/topsort5.png) | 
+|:--:| 
+| *Courtesy: shafaetsplanet* |
 - Problem: Given a directed acyclic graph (DAG), find a topological ordering of its vertices.
 - Input: Number of nodes `n` and edges `m`, followed by `m` directed edges.
 - Output: Print one possible topological ordering of the graph.
