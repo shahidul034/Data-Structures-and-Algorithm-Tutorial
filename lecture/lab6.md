@@ -277,13 +277,14 @@ Update the path
 | ![Dijkstra's algorithm](http://www.shafaetsplanet.com/planetcoding/wp-content/uploads/2013/04/dijkstra26.png) | 
 |:--:| 
 | *Courtesy: shafaetsplanet* |
+
 ```c
 if dis[u] + cost[u][v] < dis[v]:
 dis[v] = dis[u] + cost[u][v]
 ```
-#### Simple implementation using BFS
+#### Dijkstra implementation using BFS
 ```c
-void dijkstra(int start,int node,vector<int>vec[],map<int,int>cost,infinity)
+void dijkstra(int start,int node,vector<int>vec[],map<int, map<int,int>>cost)
 {
     map<int, int> dis; // Maps to track visited nodes and their distances
     for(int i=1;i<=node;i++)dis[i]=infinity;
@@ -305,8 +306,9 @@ void dijkstra(int start,int node,vector<int>vec[],map<int,int>cost,infinity)
     }
 
     // Output the distance of each node from the start node
-    for (int i = 1; i <= node; i++) {
-        cout << "Node --> " << i << " : " << dis[i] << endl;
+    for (int i = 1; i <= node; i++)
+    {
+        cout << "Distance from node 1 to node "<<i<< " is " << dis[i] << endl;
     }
 }
 int main()
@@ -314,18 +316,17 @@ int main()
     freopen("in.txt","r",stdin);
     int node;
     vector<int>vec[100];
-    int maxInt = numeric_limits<int>::max();//#include<limits>
     cin>>node;
     int a,b,c;
-    map<int,int>cost;
+    map<int, map<int,int>>cost;
     while(cin>>a>>b>>c)
     {
         vec[a].push_back(b);
+        vec[b].push_back(a);
         cost[a][b]=c;
     }
-    dijkstra(1,node,vec,cost,maxInt);
+    dijkstra(1,node,vec,cost);
 }
-
 ```
 #### Dijkstra’s Algorithm using Priority Queue
 ##### Comparator Class for Priority Queue
@@ -342,57 +343,80 @@ This is a custom comparator that is used to implement a min-heap using C++’s `
 
 ##### Dijkstra’s Algorithm Implementation using priority queue
 ```c
-void dijaktra(int start,int node, vector<int>vec[],map<int,int>cost, int inf) {
+void dijkstra(int start,int node, vector<int>vec[],map<int,map<int,int>>cost)
+{
     priority_queue<pair<int, int>, vector<pair<int, int>>, compare> priorQ;
     map<int,int>dis;
     // Initialize all distances to infinity
-    for (int i = 1; i <=node; i++) 
-        dis[i] = inf;
-    
+    for (int i = 1; i <=node; i++)
+        dis[i] = infinity;
+
     // Set the distance for the start node to 0
     dis[start] = 0;
-    
+
     // Push the start node into the priority queue with a distance of 0
     priorQ.push(make_pair(start, dis[start]));
 
-    while (!priorQ.empty()) {
+    while (!priorQ.empty())
+    {
         // Extract the node with the smallest known distance
         int u = priorQ.top().first;
         priorQ.pop();
 
         // Traverse all neighbors of node 'u'
-        for (int i = 0; i < vec[u].size(); i++) {
+        for (int i = 0; i < vec[u].size(); i++)
+        {
             int v = vec[u][i]; // Neighbor node
 
             // If a shorter path to node 'v' is found through 'u'
-            if (cost[u][v] + dis[u] < dis[v]) {
+            if (cost[u][v] + dis[u] < dis[v])
+            {
                 dis[v] = cost[u][v] + dis[u];  // Update distance
                 priorQ.push(make_pair(v, dis[v]));  // Push updated distance into the priority queue
             }
         }
     }
-    for(int i=1; i<=node; i++)
+    for (int i = 1; i <= node; i++)
     {
-        cout<<dis[i]<<" ";
+        cout << "Distance from node 1 to node "<<i<< " is " << dis[i] << endl;
     }
 }
+
+
 int main()
 {
-    freopen("in.txt","r",stdin);
+    freopen("in_dij.txt","r",stdin);
     int node;
-    int maxInt = numeric_limits<int>::max();//#include<limits>
+    vector<int>vec[100];
     cin>>node;
     int a,b,c;
+    map<int, map<int,int>>cost;
     while(cin>>a>>b>>c)
     {
         vec[a].push_back(b);
+        vec[b].push_back(a);
         cost[a][b]=c;
     }
-    dijaktra(1,node,vec,cost,maxInt);
-
+    dijkstra(1,node,vec,cost);
 }
 
 ```
+
+### Bellman-Ford algorithm
+The Bellman-Ford algorithm is used to find the shortest paths from a source node to all other nodes in a weighted graph, even if the graph contains edges with negative weights. The algorithm also detects negative-weight cycles, where the total weight of a cycle is negative, which would imply the shortest path cannot be determined as the path could keep reducing indefinitely.
+
+| ![Bellman-Ford algorithm](https://www.shafaetsplanet.com/planetcoding/wp-content/uploads/2014/10/bell1.jpg) | 
+|:--:| 
+| *Courtesy: shafaetsplanet* |
+
+| ![Bellman-Ford algorithm](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/images/relax_order.png/?raw=true) | 
+|:--:| 
+| *Courtesy: shafaetsplanet* |
+
+| ![Bellman-Ford algorithm](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/images/neg_cycle.png/?raw=true) | 
+|:--:| 
+| *Courtesy: shafaetsplanet* |
+
 <h2><i>🚩Questions</i></h2>
 
 1. Connected Components (BFS/DFS)
