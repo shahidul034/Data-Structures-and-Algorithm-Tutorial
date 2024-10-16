@@ -162,11 +162,11 @@ int main() {
 ### ✅Breadth-First Search (BFS)
 Breadth-First Search (BFS) for an unweighted, undirected graph.
 #### Graph Representation
-The graph is represented as an adjacency list using a vector of vectors vec[100], where each vec[i] holds the neighbors (or adjacent nodes) of node i.
+The graph is represented as an adjacency list using a vector of vectors `vec[100]`, where each `vec[i]` holds the neighbors (or adjacent nodes) of node `i`.
 #### BFS Function
 The BFS function takes a starting node start and traverses the graph layer by layer, visiting all nodes that are reachable from the start node. BFS uses a queue to explore nodes and a visited map to track which nodes have been visited to avoid revisiting them. A label map stores the distance of each node from the starting node.
 ```c
-void bfs(int start)
+void bfs(int start,int node, vector<int>vec[])
 {
     map<int, int> visited, label; // Maps to track visited nodes and their distances
     queue<int> q;                 // Queue for BFS traversal
@@ -175,13 +175,16 @@ void bfs(int start)
     q.push(start);                // Push the start node into the queue
     visited[start] = 1;           // Mark start node as visited
 
-    while (!q.empty()) {          // Continue until the queue is empty
+    while (!q.empty())            // Continue until the queue is empty
+    {
         int u = q.front();        // Get the front node from the queue
         q.pop();                  // Remove the front node from the queue
 
-        for (int i = 0; i < vec[u].size(); i++) {
+        for (int i = 0; i < vec[u].size(); i++)
+        {
             int v = vec[u][i];    // Get the adjacent node v to node u
-            if (!visited[v]) {    // If node v is not visited
+            if (!visited[v])      // If node v is not visited
+            {
                 visited[v] = 1;   // Mark node v as visited
                 label[v] = label[u] + 1; // Set the distance of v to be distance of u + 1
                 q.push(v);        // Push v to the queue for further exploration
@@ -190,16 +193,37 @@ void bfs(int start)
     }
 
     // Output the distance of each node from the start node
-    for (int i = 1; i <= node; i++) {
-        cout << "Node 1 --> " << i << " : " << label[i] << endl;
+    for (int i = 1; i <= node; i++)
+    {
+        cout << "Distance from node 1 to " << i << " is " << label[i] << endl;
     }
 }
-
 ```
 - `Visited Map`: Keeps track of the nodes that have been visited during the BFS.
 Label 
 - `Map`: Stores the distance (number of edges) from the start node to each node.
 - `Queue`: Used to explore nodes level by level. BFS explores all neighbors of a node before moving on to the next level of nodes.
+#### Main function
+```c
+int main()
+{
+    freopen("in_bfs_dfs.txt", "r", stdin);  // Open input file in.txt for reading
+    int a, b,node;
+    vector<int>vec[100];
+    cin >> node;                    // Input number of nodes
+    // Read the graph edges (pairs of nodes) and build the adjacency list
+    while (cin >> a >> b)
+    {
+        vec[a].push_back(b);        // Add edge a --> b
+        vec[b].push_back(a);        // Since the graph is undirected, also add b --> a
+    }
+
+    bfs(1,node,vec);                         // Start BFS from node 1
+
+    return 0;
+}
+```
+
 #### Main Function
 ```c
 int main()
@@ -218,9 +242,11 @@ int main()
     bfs(1);                         // Start BFS from node 1
 
     return 0;
+}
 ```
 - The BFS traverses the graph level by level, starting from node 1.
 - The distance (label) of each node from node 1 is printed after the traversal.
+[Full code](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/code/bfs.cpp)
 ### ✅Depth-First Search (DFS)
 The DFS (Depth-First Search) algorithm explores a graph by going as deep as possible along each branch before backtracking. DFS can be implemented either recursively or iteratively, and the example provided uses a recursive implementation.
 
@@ -230,56 +256,67 @@ The DFS (Depth-First Search) algorithm explores a graph by going as deep as poss
 - `Recursion`: DFS dives deeper into the graph by recursively visiting all unvisited neighbors until all nodes reachable from the starting node have been visited.
 
 ```c
-#include<iostream>
-#include<vector>
-#include<map>
-
-using namespace std;
-
-vector<int> vec[100]; // Adjacency list to store the graph
-map<int, bool> visited; // Map to track visited nodes
-map<int,int>label;
-int flag=0;
-// DFS function starting from node 'u'
-void dfs(int u) {
-    if (flag==0){
-        flag=1;
-        label[u]=0;
-    }
-    visited[u] = true; // Mark the current node as visited
-    cout << u << " "; // Print the node to see the DFS traversal order
-
-    // Loop through all adjacent nodes (neighbors) of node 'u'
-    for (int i = 0; i < vec[u].size(); i++) {
-        int v = vec[u][i]; // Get the adjacent node
-        if (!visited[v]) { // If the adjacent node is not visited
-            label[v]=label[u]+1;
-            dfs(v); // Recursively perform DFS on this node
-        }
-    }
+int finishingtime[10000];
+vector<int>vec[100];
+map<int,string>color;
+int visited[1000];
+vector<int>v;
+int startingtime[1000];
+int time_cnt=0,n;
+int DFS_VISIT(int);
+void DFS(int n)
+{
+	for(int i=1;i<=n;i++)
+	{
+		color[i]="white";
+	}
+	for(int i=0;i<n;i++)
+	{
+		if(color[i]=="white")
+		{
+			DFS_VISIT(i);
+		}
+	}
 }
-
-int main() {
-    freopen("in.txt", "r", stdin); // Open input file for reading
-    int node, edges; // Number of nodes and edges
-    cin >> node >> edges;
-
-    // Reading edges and building the adjacency list
-    int a, b;
-    for (int i = 0; i < edges; i++) {
-        cin >> a >> b;
-        vec[a].push_back(b); // Adding edge a --> b
-        vec[b].push_back(a); // Adding edge b --> a (undirected graph)
-    }
-
-    // Perform DFS starting from node 1
-    cout << "DFS Traversal starting from node 1:\n";
-    dfs(1); // Start DFS from node 1
-
-    return 0;
+int DFS_VISIT(int node)
+{
+	color[node]="gray";
+	time_cnt++;
+	startingtime[node]=time_cnt;
+	for(int i=0;i<vec[node].size();i++)
+	{
+		if(color[vec[node][i]]=="white")DFS_VISIT(vec[node][i]);
+	}
+	v.push_back(node);
+	color[node]="black";
+	time_cnt++;
+	finishingtime[node]=time_cnt;
 }
 
 ```
+#### Main function
+```c
+int main()
+{
+	freopen("in_bfs_dfs.txt","r",stdin);
+
+	int m;cin>>m;
+	int a,b;
+	while(cin>>a>>b)
+	{
+		vec[a].push_back(b);
+		vec[b].push_back(a);
+	}
+	DFS(m);
+	cout<<"Topological sort: "<<endl;
+	for(int i=0;i<v.size();i++)
+	{
+		cout<<v[i]<<" ";
+	}
+}
+```
+[Full code](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/code/dfs.cpp)
+
 ### ✅Dijkstra's algorithm
 
 | ![Dijkstra's algorithm](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/images/dij.png/?raw=true) | 
