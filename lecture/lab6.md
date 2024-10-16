@@ -1,7 +1,20 @@
 <h2><i>👉Lab 6 - Graphs</i></h2>
 A graph consists of vertices (or nodes) connected by edges. Depending on how we want to represent and store the graph, different input methods come into play.
 
-### ✅Inputting a Graph in C++ Using Different Methods
+### contents
+| #  | Topics name |
+| ------------- | ------------- |
+| 1 | ✔[Input Graph as an Adjacency Matrix](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab6.md#input-graph-as-an-adjacency-matrix) |
+| 2 | ✔[Input Graph as an Adjacency List](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab6.md#input-graph-as-an-adjacency-list) |
+| 3 | ✔[Input Graph as an Edge List](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab6.md#input-graph-as-an-edge-list) |
+| 4 | ✔[Breadth-First Search (BFS)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab6.md#breadth-first-search-bfs)|
+| 5 | ✔[Depth-First Search (DFS)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab6.md#depth-first-search-dfs) |
+| 6 | ✔[Dijkstra's algorithm](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab6.md#dijkstras-algorithm) |
+| 7 | ✔[Bellman-Ford algorithm](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab6.md#bellman-ford-algorithm) |
+| 8 | ✔[Floyd warshall algorithm](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab6.md#floyd-warshall-algorithm) |
+
+
+### Inputting a Graph in C++ Using Different Methods
 - Adjacency Matrix
 - Adjacency List
 - Edge List
@@ -102,7 +115,7 @@ int main() {
 ![adj list in graph](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/images/graph3.png/?raw=true)
 #### Output Example
 ![adj list in graph](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/images/graph4.png/?raw=true)
-### Input Graph as an Edge List
+### ✅Input Graph as an Edge List
 In an edge list, the graph is represented by a list of all edges, where each edge is a pair of vertices.
 ```c
 #include <iostream>
@@ -267,7 +280,7 @@ int main() {
 }
 
 ```
-### Dijkstra's algorithm
+### ✅Dijkstra's algorithm
 
 | ![Dijkstra's algorithm](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/images/dij.png/?raw=true) | 
 |:--:| 
@@ -404,7 +417,7 @@ int main()
 ```
 [Full code](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/code/dijkstra%20using%20priority%20queue.cpp)
 
-### Bellman-Ford algorithm
+### ✅Bellman-Ford algorithm
 The Bellman-Ford algorithm is used to find the shortest paths from a source node to all other nodes in a weighted graph, even if the graph contains edges with negative weights. The algorithm also detects negative-weight cycles, where the total weight of a cycle is negative, which would imply the shortest path cannot be determined as the path could keep reducing indefinitely.
 
 | ![Bellman-Ford algorithm](https://www.shafaetsplanet.com/planetcoding/wp-content/uploads/2014/10/bell1.jpg) | 
@@ -483,7 +496,7 @@ int main()
 ```
 
 [Full code](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/code/bellmanford.cpp)
-### Floyd warshall algorithm
+### ✅Floyd warshall algorithm
 | ![floyd warshall algorithm](https://www.shafaetsplanet.com/planetcoding/wp-content/uploads/2014/07/floyed1.png) | 
 |:--:| 
 | *Courtesy: shafaetsplanet* |
@@ -509,7 +522,7 @@ Initializes the mat array. If `i == j`, the distance from a node to itself is `0
 ```c
     for(int i=1; i<=node; i++)
     {
-        for(int j=1; j<=node; j++)
+        for(isnt j=1; j<=node; j++)
             if(i!=j)
                 mat[i][j]=inf;
             else
