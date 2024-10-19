@@ -8,7 +8,7 @@ int main()
     // for (int i = 0; i < 5; i++)
     // {
     //     cout << "enter: ";
-    //     cin >> arr2[i];
+    //     cin >>d arr2[i];
     // }
     cout << arr[0] << endl;
     for (int i = 0; i < 5; i++)
