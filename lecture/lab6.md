@@ -248,6 +248,12 @@ int main()
 - The distance (label) of each node from node 1 is printed after the traversal.
 [Full code](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/code/bfs.cpp)
 ### ✅Depth-First Search (DFS)
+| ![Dijkstra's algorithm](https://www.shafaetsplanet.com/planetcoding/wp-content/uploads/2012/03/dfs21.png) | 
+| ![Dijkstra's algorithm](https://www.shafaetsplanet.com/planetcoding/wp-content/uploads/2012/03/dfs32.png) | 
+| ![Dijkstra's algorithm](https://www.shafaetsplanet.com/planetcoding/wp-content/uploads/2012/03/dfs411.png) | 
+|:--:|
+| *Courtesy: shafaetsplanet* |
+
 The DFS (Depth-First Search) algorithm explores a graph by going as deep as possible along each branch before backtracking. DFS can be implemented either recursively or iteratively, and the example provided uses a recursive implementation.
 
 - `visited[u] = true`: Marks node u as visited so that it will not be visited again during the DFS.
@@ -612,6 +618,12 @@ int main()
 ```
 
 [Full code](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/code/floyed_warshell.cpp)
+
+### More graphs related topics
+- Strongly Connected Components
+- Spanning Tree and Minimum Spanning Tree
+    - Prim's Algorithm
+    - Kruskal's Algorithm
 <h2><i>🚩Questions</i></h2>
 
 1. Connected Components (BFS/DFS)
