@@ -203,6 +203,9 @@ void bfs(int start,int node, vector<int>vec[])
 Label 
 - `Map`: Stores the distance (number of edges) from the start node to each node.
 - `Queue`: Used to explore nodes level by level. BFS explores all neighbors of a node before moving on to the next level of nodes.
+- `visited[u] = true`: Marks node u as visited so that it will not be visited again during the DFS.
+- `for (int i = 0; i < vec[u].size(); i++)`: Loops through all the neighbors of node u.
+- `if (!visited[v])`: If the neighbor v is not yet visited, the DFS function is called recursively for v.
 #### Main function
 ```c
 int main()
@@ -256,9 +259,6 @@ int main()
 
 The DFS (Depth-First Search) algorithm explores a graph by going as deep as possible along each branch before backtracking. DFS can be implemented either recursively or iteratively, and the example provided uses a recursive implementation.
 
-- `visited[u] = true`: Marks node u as visited so that it will not be visited again during the DFS.
-- `for (int i = 0; i < vec[u].size(); i++)`: Loops through all the neighbors of node u.
-- `if (!visited[v])`: If the neighbor v is not yet visited, the DFS function is called recursively for v.
 - `Recursion`: DFS dives deeper into the graph by recursively visiting all unvisited neighbors until all nodes reachable from the starting node have been visited.
 
 ```c
