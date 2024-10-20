@@ -160,6 +160,9 @@ int main() {
 - `Adjacency List`: Best for sparse graphs to save space.
 - `Edge List:` Useful for specific algorithms where edge traversal is key.
 ### ✅Breadth-First Search (BFS)
+
+![alt text](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/images/bfs_graph.jpg/?raw=true)
+
 Breadth-First Search (BFS) for an unweighted, undirected graph.
 #### Graph Representation
 The graph is represented as an adjacency list using a vector of vectors `vec[100]`, where each `vec[i]` holds the neighbors (or adjacent nodes) of node `i`.
