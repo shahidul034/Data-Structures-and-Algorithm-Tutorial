@@ -56,7 +56,7 @@ int main() {
 }
 
 ```
-### Quick Sort
+### ✅Quick Sort
 | ![Dijkstra's algorithm](https://www.programiz.com/sites/tutorial2program/files/quick-sort-0.1_0.png) | 
 |:--:| 
 | *Courtesy: programiz.com* |
@@ -144,6 +144,6 @@ int main() {
   
 ```
 <h2><i>🚩Questions</i></h2>
-
+![Sorting problem](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/images/sorting_problem.png/?raw=true)
 
 
