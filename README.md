@@ -9,7 +9,7 @@
 | 5 | ✔[Linked Lists (Part 2)](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab5.md) |
 | 6 | ✔[Graphs](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab6.md) |
 | 7 | ✔[Sorting](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab7.md)|
-| 8 | ⏳Trees |
+| 8 | ✔[Trees](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab8.md) |
 | 9 | ⏳Backtracking and Greedy |
 | 10 | ⏳Hashing |
 | 11 | ⏳Dynamic Programming |
