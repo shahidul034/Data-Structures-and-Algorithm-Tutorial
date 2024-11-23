@@ -182,5 +182,3 @@ The solution is:
 ```
 
 ---
-
-This example demonstrates the principles of backtracking and can be extended to other problems like the **N-Queens**, **Sudoku Solver**, or **Word Search**. Let me know if you'd like more examples or explanations!
