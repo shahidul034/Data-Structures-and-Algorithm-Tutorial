@@ -10,7 +10,7 @@
 | 6 | ✔[Graphs](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab6.md) |
 | 7 | ✔[Sorting](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab7.md)|
 | 8 | ✔[Trees](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab8.md) |
-| 9 | ⏳Backtracking and Greedy |
+| 9 | ✔[Backtracking](https://github.com/shahidul034/Data-Structures-and-Algorithm-Tutorial/blob/main/lecture/lab9.md) |
 | 10 | ⏳Hashing |
 | 11 | ⏳Dynamic Programming |
 
