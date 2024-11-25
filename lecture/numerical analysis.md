@@ -9,15 +9,15 @@ Interpolation is a method of estimating unknown values between known data points
 #### 1. **Linear Interpolation**
 - Connects two adjacent points with a straight line and estimates values within this interval.
 - Formula:
-  \[
-  f(x) = f(x_0) + \frac{(x - x_0)}{(x_1 - x_0)} \times \big(f(x_1) - f(x_0)\big)
-  \]
-  - \( x_0, x_1 \): Known points
-  - \( f(x_0), f(x_1) \): Function values at \( x_0, x_1 \)
-  - \( x \): Point to estimate
+![alt text](linear_interpolation.png)
+   - ![alt text](https://latex.codecogs.com/svg.image?\(x_0,x_1\)):  Known points
+   - ![alt text](https://latex.codecogs.com/svg.image?\(f(x_0),f(x_1)\)): Function values at ![alt text](https://latex.codecogs.com/svg.image?\(x_0,x_1\))
+  - ![alt text](https://latex.codecogs.com/svg.image?\(x\)): Point to estimate
+
+   
 
 #### 2. **Polynomial Interpolation**
-- Fits a polynomial of degree \( n \) through \( n+1 \) data points.
+- Fits a polynomial of degree ![alt text](https://latex.codecogs.com/svg.image?\(n\)) through ![alt text](https://latex.codecogs.com/svg.image?\(n+1\)) data points.
 - Example: Lagrange interpolation, Newton's divided differences.
 
 #### 3. **Spline Interpolation**
@@ -49,11 +49,9 @@ By choosing the appropriate method, interpolation can provide accurate and effic
 
 ### **Linear Interpolation**
 
-Linear interpolation is a simple method of estimating a value within two known values on a straight line. If two points \((x_0, y_0)\) and \((x_1, y_1)\) are known, the value \( y \) at a given \( x \) is estimated as:
+Linear interpolation is a simple method of estimating a value within two known values on a straight line. If two points ![alt text](https://latex.codecogs.com/svg.image?\((x_0,y_0)\)) and ![alt text](https://latex.codecogs.com/svg.image?\((x_1,y_1)\)) are known, the value \( y \) at a given \( x \) is estimated as:
 
-\[
-y = y_0 + (x - x_0) \cdot \frac{(y_1 - y_0)}{(x_1 - x_0)}
-\]
+![alt text](https://latex.codecogs.com/svg.image?\[y=y_0&plus;(x-x_0)\cdot\frac{(y_1-y_0)}{(x_1-x_0)}\])
 
 ---
 
@@ -61,38 +59,28 @@ y = y_0 + (x - x_0) \cdot \frac{(y_1 - y_0)}{(x_1 - x_0)}
 
 #### Problem:
 Given two points:
-- \( (x_0, y_0) = (1, 3) \)
-- \( (x_1, y_1) = (4, 7) \)
+- ![alt text](https://latex.codecogs.com/svg.image?\((x_0,y_0)=(1,3)\))
+- ![alt text](https://latex.codecogs.com/svg.image?\((x_1,y_1)=(4,7)\))
 
 Estimate the value of \( y \) at \( x = 2.5 \).
 
 #### Solution:
 1. Known values:
-   - \( x_0 = 1 \), \( y_0 = 3 \)
-   - \( x_1 = 4 \), \( y_1 = 7 \)
-   - \( x = 2.5 \)
+   - ![alt text](https://latex.codecogs.com/svg.image?\(x_0=1\),\(y_0=3\))
+   - ![alt text](https://latex.codecogs.com/svg.image?\(x_1=4\),\(y_1=7\))
+   - ![alt text](https://latex.codecogs.com/svg.image?\(x=2.5\))
 
 2. Apply the formula:
-   \[
-   y = y_0 + (x - x_0) \cdot \frac{(y_1 - y_0)}{(x_1 - x_0)}
-   \]
+   ![alt text](https://latex.codecogs.com/svg.image?\[y=y_0+(x-x_0)\cdot\frac{(y_1-y_0)}{(x_1-x_0)}\])
    Substituting values:
-   \[
-   y = 3 + (2.5 - 1) \cdot \frac{(7 - 3)}{(4 - 1)}
-   \]
+   ![alt text](https://latex.codecogs.com/svg.image?\[y=3+(2.5-1)\cdot\frac{(7-3)}{(4-1)}\])
 
 3. Simplify:
-   \[
-   y = 3 + 1.5 \cdot \frac{4}{3}
-   \]
-   \[
-   y = 3 + 2
-   \]
-   \[
-   y = 5
-   \]
+   ![alt text](https://latex.codecogs.com/svg.image?\[y=3+1.5\cdot\frac{4}{3}\])
+   ![alt text](https://latex.codecogs.com/svg.image?\[y=3+2\])
+   ![alt text](https://latex.codecogs.com/svg.image?\[y=5\])
 
-So, the interpolated value is \( y = 5 \).
+So, the interpolated value is ![alt text](https://latex.codecogs.com/svg.image?\(y=5\)).
 
 
 
@@ -113,29 +101,23 @@ Polynomial interpolation is a numerical method to find a polynomial that passes 
 
 ### **Key Idea**
 
-Given \( n+1 \) data points:
-\[
-(x_0, y_0), (x_1, y_1), \dots, (x_n, y_n),
-\]
-we aim to find a polynomial \( P(x) \) of degree \( n \) such that:
+Given ![alt text](https://latex.codecogs.com/svg.image?\(n+1\)) data points:
+![alt text](https://latex.codecogs.com/svg.image?\[(x_0,y_0),(x_1,y_1),\dots,(x_n,y_n),\])
+we aim to find a polynomial ![alt text](https://latex.codecogs.com/svg.image?\(P(x)\)) of degree ![alt text](https://latex.codecogs.com/svg.image?\(n\)) such that:
 
-\[
-P(x_i) = y_i \quad \text{for } i = 0, 1, \dots, n.
-\]
+![alt text](https://latex.codecogs.com/svg.image?\[P(x_i)=y_i\quad\text{for}i=0,1,\dots,n.\])
 
 ---
 
 ### **Simple Steps**
 
 1. **Identify Data Points:**
-   You have \( n+1 \) points \((x_0, y_0), (x_1, y_1), \dots\). These points represent known values of the function \( f(x) \).
+   You have ![alt text](https://latex.codecogs.com/svg.image?\(n&plus;1\)) points ![alt text](https://latex.codecogs.com/svg.image?\((x_0,y_0),(x_1,y_1),\dots\)). These points represent known values of the function \( f(x) \).
 
 2. **Construct the Polynomial:**
    - The polynomial \( P(x) \) is a combination of powers of \( x \):
-     \[
-     P(x) = a_0 + a_1x + a_2x^2 + \dots + a_nx^n,
-     \]
-     where \( a_0, a_1, \dots, a_n \) are coefficients to be determined.
+     ![alt text](https://latex.codecogs.com/svg.image?\[P(x)=a_0&plus;a_1x&plus;a_2x^2&plus;\dots&plus;a_nx^n,\])
+     where ![alt text](https://latex.codecogs.com/svg.image?\(a_0,a_1,\dots,a_n\)) are coefficients to be determined.
 
 3. **Find Coefficients:**
    Use techniques like:
