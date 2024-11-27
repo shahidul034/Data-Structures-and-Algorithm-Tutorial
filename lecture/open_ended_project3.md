@@ -51,12 +51,6 @@ Students will create a simple library management system that uses various data s
 - Add basic file handling for persistent storage
 - Create a simple command-line interface
 
-**Why this project is suitable for beginners:**
-1. Clear modular structure allowing step-by-step implementation
-2. Covers all major topics from the syllabus
-3. Can be completed with basic functionality in a week
-4. Scalable - students can add features based on their understanding
-5. Real-world application that students can relate to
 
 **Implementation Tips for Students:**
 1. Start with basic book and borrower classes
