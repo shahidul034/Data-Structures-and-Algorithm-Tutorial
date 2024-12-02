@@ -174,6 +174,115 @@ False	False	True
 ```
 
 ---
+### **Planning**  
+Planning in artificial intelligence involves generating a sequence of actions to achieve a specific goal from a given initial state, considering constraints.
+
+#### Components of a Planning Problem:
+1. **Initial State (\( S_0 \)):** The starting point of the system.
+2. **Goal State (\( G \)):** A description of the desired outcome.
+3. **Actions:** Possible transformations that can move the system from one state to another.
+   - Each action has:
+     - **Preconditions:** Conditions that must be true for the action to be executed.
+     - **Effects:** Changes to the state caused by the action.
+
+#### Planning Approaches:
+1. **State-Space Planning:** Searches through all possible states to find a sequence that achieves the goal.
+   - Forward Planning: Starts at \( S_0 \) and progresses towards \( G \).
+   - Backward Planning: Starts at \( G \) and works backward to \( S_0 \).
+
+2. **Partial-Order Planning:** Constructs plans with unordered steps, resolving conflicts dynamically as needed.
+
+3. **Hierarchical Task Network (HTN):** Breaks tasks into subtasks for more structured planning.
+
+4. **Graph-Based Planning:** Uses structures like planning graphs for efficient reasoning (e.g., GraphPlan).
+
+#### Example:
+- Initial State: Robot is at location \( A \).
+- Goal: Robot is at location \( C \).
+- Actions:
+  1. Move from \( A \) to \( B \) (Precondition: Robot at \( A \)).
+  2. Move from \( B \) to \( C \) (Precondition: Robot at \( B \)).
+- Plan: Move \( A \rightarrow B \rightarrow C \). 
+
+Python provides libraries like **PDDL (Planning Domain Definition Language) libraries** and frameworks such as **Pyomo** and **AI-specific libraries** like **`pyplanning`** to implement planning problems. A common and simple example involves coding a **state-space planner** using basic Python.
+
+Here’s a Python example to solve a **basic robot path-planning problem**:
+
+---
+
+### **Example: Robot Moving Between Locations**
+
+#### Problem Description:
+The robot starts at **Location A** and must move to **Location C** by following specific actions.
+
+---
+
+### **Code Implementation:**
+
+```python
+# Define the initial state, goal state, and actions
+initial_state = "A"
+goal_state = "C"
+
+# Define actions with their preconditions and effects
+actions = {
+    "Move_A_to_B": {"precondition": "A", "effect": "B"},
+    "Move_B_to_C": {"precondition": "B", "effect": "C"},
+    "Move_A_to_C": {"precondition": "A", "effect": "C"},  # Optional shortcut
+}
+
+# Planner function to find the sequence of actions
+def plan(initial_state, goal_state, actions):
+    current_state = initial_state
+    plan_sequence = []
+    
+    # Iteratively find actions to achieve the goal
+    while current_state != goal_state:
+        for action, details in actions.items():
+            if details["precondition"] == current_state:
+                plan_sequence.append(action)  # Add action to plan
+                current_state = details["effect"]  # Update current state
+                break
+        else:
+            print("No valid plan found!")
+            return None
+    
+    return plan_sequence
+
+# Call the planner
+plan_sequence = plan(initial_state, goal_state, actions)
+
+# Print the plan
+if plan_sequence:
+    print("Plan to achieve the goal:")
+    for step in plan_sequence:
+        print(f"- {step}")
+else:
+    print("No plan could be generated.")
+```
+
+---
+
+### **Output**:
+If you run the above code, it will output:
+```
+Plan to achieve the goal:
+- Move_A_to_B
+- Move_B_to_C
+```
+
+---
+
+### **How it Works**:
+1. **Initial State**: The robot starts at location `A`.
+2. **Goal State**: The robot needs to reach location `C`.
+3. **Actions**: Each action has:
+   - A precondition (where the robot must currently be to perform the action).
+   - An effect (where the robot will be after performing the action).
+4. **Planner**: Iteratively checks the actions whose preconditions match the current state, applies them, and updates the state until the goal is reached.
+
+
+---
 
 The **"Fame problem"** (or **celebrity problem**) is a common coding and logic problem that asks to determine if there is a "celebrity" in a group of people. A **celebrity** is defined as:
 
