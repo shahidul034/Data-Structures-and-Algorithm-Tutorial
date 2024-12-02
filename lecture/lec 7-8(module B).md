@@ -158,8 +158,8 @@ def truth_table(variables, expression):
     print("-" * (len(headers) * 8))
     
     for values in product([True, False], repeat=len(variables)):
-        env = dict(zip(variables, values))
-        result = expression(**env)
+        env = dict(zip(variables, values)) # {'P': True, 'Q': False}.
+        result = expression(**env) # env = {'P': True, 'Q': False}, then expression(**env) is equivalent to calling expression(P=True, Q=False).
         print("\t".join(str(env[var]) for var in variables), "\t", result)
 
 # Example usage
@@ -420,3 +420,194 @@ print("Celebrity:", findCelebrity(n, knows))  # Output: -1
    - Ensure the candidate knows no one else.
 
 This approach works in \( O(n) \) time. 
+
+---
+
+### Introduction to NLP
+Natural Language Processing (NLP) is a field of artificial intelligence that focuses on the interaction between computers and humans through natural language. The goal is to enable computers to understand, interpret, and generate human language in a way that is both meaningful and useful.
+
+### Key Concepts in NLP
+1. **Tokenization**: Breaking down text into smaller units, such as words or sentences.
+2. **Stop Words**: Common words (e.g., "and", "the", "is") that are often removed from text to focus on more meaningful words.
+3. **Stemming and Lemmatization**: Reducing words to their base or root form.
+4. **Part-of-Speech Tagging**: Identifying the grammatical parts of speech (e.g., nouns, verbs) in a sentence.
+5. **Named Entity Recognition (NER)**: Identifying and classifying entities (e.g., names, dates) in text.
+6. **Sentiment Analysis**: Determining the sentiment or emotion expressed in text.
+
+### Getting Started with NLP in Python
+We'll use the `nltk` library, a powerful toolkit for NLP in Python.
+
+#### Step 1: Install NLTK
+First, you need to install the `nltk` library. You can do this using pip:
+```bash
+pip install nltk
+```
+
+#### Step 2: Import NLTK and Download Data
+```python
+import nltk
+nltk.download('all')  # Download all NLTK data (you can download specific datasets as needed)
+```
+
+#### Step 3: Tokenization
+```python
+from nltk.tokenize import word_tokenize, sent_tokenize
+
+text = "Natural Language Processing is fascinating. Let's learn more about it!"
+word_tokens = word_tokenize(text)
+sent_tokens = sent_tokenize(text)
+
+print("Word Tokens:", word_tokens)
+print("Sentence Tokens:", sent_tokens)
+```
+
+#### Step 4: Removing Stop Words
+```python
+from nltk.corpus import stopwords
+
+stop_words = set(stopwords.words('english'))
+filtered_words = [word for word in word_tokens if word.lower() not in stop_words]
+
+print("Filtered Words:", filtered_words)
+```
+
+#### Step 5: Stemming and Lemmatization
+```python
+from nltk.stem import PorterStemmer, WordNetLemmatizer
+
+stemmer = PorterStemmer()
+lemmatizer = WordNetLemmatizer()
+
+stemmed_words = [stemmer.stem(word) for word in filtered_words]
+lemmatized_words = [lemmatizer.lemmatize(word) for word in filtered_words]
+
+print("Stemmed Words:", stemmed_words)
+print("Lemmatized Words:", lemmatized_words)
+```
+
+#### Step 6: Part-of-Speech Tagging
+```python
+pos_tags = nltk.pos_tag(word_tokens)
+print("Part-of-Speech Tags:", pos_tags)
+```
+
+#### Step 7: Named Entity Recognition (NER)
+```python
+from nltk import ne_chunk
+
+ner_tree = ne_chunk(pos_tags)
+print("Named Entities:", ner_tree)
+```
+
+#### Step 8: Sentiment Analysis
+For sentiment analysis, you can use libraries like `TextBlob` or `VADER`:
+```python
+from textblob import TextBlob
+
+blob = TextBlob(text)
+print("Sentiment:", blob.sentiment)
+```
+
+## You can use the transformers library from Hugging Face for various NLP tasks:
+
+### 1. Sentiment Analysis
+```python
+from transformers import pipeline
+
+# Load the sentiment-analysis pipeline
+classifier = pipeline('sentiment-analysis')
+
+# Analyze sentiment
+result = classifier("I love using the transformers library!")
+print(result)
+```
+This will output:
+```
+[{'label': 'POSITIVE', 'score': 0.9998}]
+```
+
+### 2. Named Entity Recognition (NER)
+```python
+from transformers import pipeline
+
+# Load the NER pipeline
+ner = pipeline('ner', grouped_entities=True)
+
+# Perform NER
+result = ner("Hugging Face Inc. is a company based in New York City.")
+print(result)
+```
+This will output:
+```
+[{'entity_group': 'ORG', 'score': 0.998, 'word': 'Hugging Face Inc.'},
+ {'entity_group': 'LOC', 'score': 0.999, 'word': 'New York City'}]
+```
+
+### 3. Text Generation
+```python
+from transformers import pipeline
+
+# Load the text generation pipeline
+generator = pipeline('text-generation', model='gpt2')
+
+# Generate text
+result = generator("Once upon a time", max_length=50, num_return_sequences=1)
+print(result)
+```
+This will output a continuation of the given text.
+
+### 4. Question Answering
+```python
+from transformers import pipeline
+
+# Load the question-answering pipeline
+qa = pipeline('question-answering')
+
+# Answer a question
+result = qa(question="What is the capital of France?", context="Paris is the capital of France.")
+print(result)
+```
+This will output:
+```
+{'score': 0.99, 'start': 0, 'end': 5, 'answer': 'Paris'}
+```
+
+### 5. Text Summarization
+```python
+from transformers import pipeline
+
+# Load the summarization pipeline
+summarizer = pipeline('summarization')
+
+# Summarize text
+text = """
+The transformers library by Hugging Face provides thousands of pretrained models to perform tasks on different modalities such as text, vision, and audio.
+These models can be applied on: text, for tasks like text classification, information extraction, question answering, summarization, translation, and text generation.
+"""
+result = summarizer(text, max_length=50, min_length=25, do_sample=False)
+print(result)
+```
+This will output a summarized version of the given text.
+
+### 6. Translation
+```python
+from transformers import pipeline
+
+# Load the translation pipeline
+translator = pipeline('translation_en_to_fr')
+
+# Translate text
+result = translator("Hello, how are you?")
+print(result)
+```
+This will output:
+```
+[{'translation_text': 'Bonjour, comment ça va ?'}]
+```
+
+These examples demonstrate the versatility of the `transformers` library for various NLP tasks. You can explore more models and tasks on the [Hugging Face Transformers GitHub page](https://github.com/huggingface/transformers)(https://github.com/huggingface/transformers).
+
+
+### Conclusion
+There are many more advanced techniques and libraries (like `spaCy` and `transformers`) that you can explore as you dive deeper into NLP.
+
