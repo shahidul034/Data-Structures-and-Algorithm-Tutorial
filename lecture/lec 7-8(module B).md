@@ -107,6 +107,10 @@ print("P ↔ Q:", equivalent_result)  # False
 
 For predicate logic, we use functions to represent predicates and loops or comprehensions for quantifiers.
 
+> [!NOTE]
+> any looks for at least one true instance.
+> all requires every instance to be true.
+
 #### **Universal Quantifier ( ∀ ):**
 ```python
 # Define the domain and predicate
@@ -163,7 +167,7 @@ def expr(P, Q):
 truth_table(['P', 'Q'], expr)
 ```
 
-Output for \( P \rightarrow Q \):
+Output for \( P → Q \):
 ```
 P	Q	expr
 --------------------
