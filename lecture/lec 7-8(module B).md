@@ -146,6 +146,8 @@ print("∀x (x > 2 → x is even):", implies_all)  # False (e.g., x = 3 is > 2 b
 ### **3. Truth Table Generator**
 A reusable function to generate truth tables for propositional logic.
 
+
+
 ```python
 from itertools import product
 
@@ -166,6 +168,34 @@ def expr(P, Q):
 
 truth_table(['P', 'Q'], expr)
 ```
+<details>
+<summary><h2><i>([True, False], repeat=len(variables))</i></h2></summary>
+This code is used to generate all possible combinations of truth values for the given variables.:
+
+### `([True, False], repeat=len(variables))`
+- **`[True, False]`**: This is a list containing the two possible truth values, `True` and `False`.
+- **`repeat=len(variables)`**: This specifies how many times the list `[True, False]` should be repeated. The `len(variables)` part calculates the number of variables you have.
+
+### Purpose
+When you use this in the `product` function from the `itertools` module, it generates the Cartesian product of `[True, False]` repeated as many times as there are variables. This means it will create all possible combinations of `True` and `False` for the given number of variables.
+
+### Example
+If you have two variables, `P` and `Q`, `product([True, False], repeat=2)` will generate:
+- `(True, True)`
+- `(True, False)`
+- `(False, True)`
+- `(False, False)`
+
+These combinations represent all possible truth values for the variables `P` and `Q`.
+
+### Code Context
+In your `truth_table` function, this line:
+```python
+for values in product([True, False], repeat=len(variables)):
+```
+iterates over each combination of truth values, allowing you to evaluate the logical expression for each combination and print the results in the truth table.
+</details>
+
 
 Output for \( P → Q \):
 ```
