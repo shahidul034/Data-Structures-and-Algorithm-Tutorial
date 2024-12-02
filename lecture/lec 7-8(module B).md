@@ -12,21 +12,21 @@ Also known as **sentential logic**, it deals with propositions (statements) that
     - "2 + 2 = 4." (True)
 - **Logical Connectives:** Combine or modify propositions to form complex statements.
   - **AND ( ∧ ):** True if both statements are true.
-    - Example: \( P \land Q \)
+    - Example: \( P ∧ Q \)
   - **OR ( ∨ ):** True if at least one statement is true.
-    - Example: \( P \lor Q \)
+    - Example: \( P ∨ Q \)
   - **NOT ( ¬ ):** True if the statement is false.
-    - Example: \( \neg P \)
+    - Example: \( ¬ P \)
   - **IMPLIES ( → ):** True unless the first statement is true and the second is false.
-    - Example: \( P \rightarrow Q \)
+    - Example: \( P → Q \)
   - **EQUIVALENT ( ↔ ):** True if both statements have the same truth value.
-    - Example: \( P \leftrightarrow Q \)
+    - Example: \( P ↔ Q \)
 
 #### **Truth Tables:**
 Used to determine the truth value of a compound proposition.
 - Example:
-    For \( P \land Q \):
-    | P   | Q   | \( P \land Q \) |
+    For \( P ∧ Q \):
+    | P   | Q   | \( P ∧ Q \) |
     |-----|-----|----------------|
     | T   | T   | T              |
     | T   | F   | F              |
