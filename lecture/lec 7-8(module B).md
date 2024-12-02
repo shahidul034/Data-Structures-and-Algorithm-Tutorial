@@ -108,8 +108,8 @@ print("P ↔ Q:", equivalent_result)  # False
 For predicate logic, we use functions to represent predicates and loops or comprehensions for quantifiers.
 
 > [!NOTE]
-> any looks for at least one true instance.
-> all requires every instance to be true.
+> `any` looks for at least one true instance.
+> `all` requires every instance to be true.
 
 #### **Universal Quantifier ( ∀ ):**
 ```python
