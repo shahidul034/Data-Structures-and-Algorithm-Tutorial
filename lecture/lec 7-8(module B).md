@@ -36,26 +36,26 @@ Used to determine the truth value of a compound proposition.
 ---
 
 ### **2. Predicate Logic**
-Also known as **first-order logic**, it extends propositional logic by dealing with **quantified variables** and **relationships**.
+Predicate logic (also called first-order logic) extends propositional logic by including **quantifiers** and predicates, enabling more expressive reasoning.
 
 #### **Key Features:**
 - **Predicates:** Statements involving variables.
-  - Example: \( P(x): x \text{ is a prime number.} \)
+  - Example: P(x): x is a prime number.
 - **Quantifiers:** Specify the scope of a variable.
   - **Universal Quantifier ( ∀ ):** "For all."
-    - Example: \( \forall x \, P(x) \): "For all \( x \), \( P(x) \) is true."
+    - Example: ∀x, P(x): "∀x, P(x) is true."
   - **Existential Quantifier ( ∃ ):** "There exists."
-    - Example: \( \exists x \, P(x) \): "There exists an \( x \) such that \( P(x) \) is true."
+    - Example: ∃x, P(x): "There exists an x such that P(x)  is true."
 
 #### **Domains and Variables:**
 - The truth of a predicate depends on the domain (set of possible values for variables).
-  - Example: If \( P(x): x > 0 \) and domain = \{ -2, -1, 0, 1, 2 \}, then:
-    - \( \exists x \, P(x) \): True (for \( x = 1, 2 \)).
-    - \( \forall x \, P(x) \): False (because \( -2, -1, 0 \) are not \( > 0 \)).
+  - Example: If P(x): x > 0 and domain = { -2, -1, 0, 1, 2 }, then:
+    - ∃x, P(x): True (for \( x = 1, 2 \)).
+    - ∀x, P(x): False (because \( -2, -1, 0 \) are not \( > 0 \)).
 
 #### **Logical Statements:**
 - Combine predicates using logical connectives and quantifiers.
-  - Example: \( \forall x \, (P(x) \rightarrow Q(x)) \): "For all \( x \), if \( P(x) \) is true, then \( Q(x) \) is true."
+  - Example: \( ∀ x \, (P(x) → Q(x)) \): "For all \( x \), if \( P(x) \) is true, then \( Q(x) \) is true."
 
 ---
 
@@ -202,7 +202,7 @@ Planning in artificial intelligence involves generating a sequence of actions to
 - Actions:
   1. Move from \( A \) to \( B \) (Precondition: Robot at \( A \)).
   2. Move from \( B \) to \( C \) (Precondition: Robot at \( B \)).
-- Plan: Move \( A \rightarrow B \rightarrow C \). 
+- Plan: Move \( A → B → C \). 
 
 Python provides libraries like **PDDL (Planning Domain Definition Language) libraries** and frameworks such as **Pyomo** and **AI-specific libraries** like **`pyplanning`** to implement planning problems. A common and simple example involves coding a **state-space planner** using basic Python.
 
