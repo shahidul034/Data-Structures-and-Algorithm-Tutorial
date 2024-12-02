@@ -1,0 +1,279 @@
+Propositional and predicate logic are fundamental concepts in formal logic used to represent and reason about statements.
+
+---
+
+### **1. Propositional Logic**
+Also known as **sentential logic**, it deals with propositions (statements) that are either true or false.
+
+#### **Key Features:**
+- **Propositions:** Simple declarative statements with a truth value.
+  - Examples:
+    - "It is raining." (True or False)
+    - "2 + 2 = 4." (True)
+- **Logical Connectives:** Combine or modify propositions to form complex statements.
+  - **AND ( ∧ ):** True if both statements are true.
+    - Example: \( P \land Q \)
+  - **OR ( ∨ ):** True if at least one statement is true.
+    - Example: \( P \lor Q \)
+  - **NOT ( ¬ ):** True if the statement is false.
+    - Example: \( \neg P \)
+  - **IMPLIES ( → ):** True unless the first statement is true and the second is false.
+    - Example: \( P \rightarrow Q \)
+  - **EQUIVALENT ( ↔ ):** True if both statements have the same truth value.
+    - Example: \( P \leftrightarrow Q \)
+
+#### **Truth Tables:**
+Used to determine the truth value of a compound proposition.
+- Example:
+    For \( P \land Q \):
+    | P   | Q   | \( P \land Q \) |
+    |-----|-----|----------------|
+    | T   | T   | T              |
+    | T   | F   | F              |
+    | F   | T   | F              |
+    | F   | F   | F              |
+
+---
+
+### **2. Predicate Logic**
+Also known as **first-order logic**, it extends propositional logic by dealing with **quantified variables** and **relationships**.
+
+#### **Key Features:**
+- **Predicates:** Statements involving variables.
+  - Example: \( P(x): x \text{ is a prime number.} \)
+- **Quantifiers:** Specify the scope of a variable.
+  - **Universal Quantifier ( ∀ ):** "For all."
+    - Example: \( \forall x \, P(x) \): "For all \( x \), \( P(x) \) is true."
+  - **Existential Quantifier ( ∃ ):** "There exists."
+    - Example: \( \exists x \, P(x) \): "There exists an \( x \) such that \( P(x) \) is true."
+
+#### **Domains and Variables:**
+- The truth of a predicate depends on the domain (set of possible values for variables).
+  - Example: If \( P(x): x > 0 \) and domain = \{ -2, -1, 0, 1, 2 \}, then:
+    - \( \exists x \, P(x) \): True (for \( x = 1, 2 \)).
+    - \( \forall x \, P(x) \): False (because \( -2, -1, 0 \) are not \( > 0 \)).
+
+#### **Logical Statements:**
+- Combine predicates using logical connectives and quantifiers.
+  - Example: \( \forall x \, (P(x) \rightarrow Q(x)) \): "For all \( x \), if \( P(x) \) is true, then \( Q(x) \) is true."
+
+---
+
+### **Comparison:**
+
+| Aspect               | Propositional Logic                  | Predicate Logic                       |
+|----------------------|--------------------------------------|---------------------------------------|
+| **Scope**            | Deals with whole statements.         | Deals with statements involving variables. |
+| **Connectives**      | AND, OR, NOT, IMPLIES, etc.          | Same as propositional logic.          |
+| **Quantifiers**      | Not used.                            | Uses ∀ (all) and ∃ (exists).          |
+| **Expressiveness**   | Less expressive (e.g., "It is raining"). | More expressive (e.g., "Some cities have rain"). |
+
+---
+
+### **Applications:**
+- **Propositional Logic:** Circuit design, simple logical systems, truth tables.
+- **Predicate Logic:** Database queries, artificial intelligence, theorem proving.
+
+Here are examples demonstrating **propositional logic** and **predicate logic** concepts using Python:
+
+---
+
+### **1. Propositional Logic in Python**
+
+We'll use simple Boolean operations to represent logical connectives.
+
+```python
+# Example propositions
+P = True  # "It is raining."
+Q = False  # "It is snowing."
+
+# Logical connectives
+and_result = P and Q  # AND (∧)
+or_result = P or Q    # OR (∨)
+not_result = not P    # NOT (¬)
+implies_result = not P or Q  # IMPLIES (P → Q) is equivalent to (¬P ∨ Q)
+equivalent_result = P == Q   # EQUIVALENT (P ↔ Q)
+
+print("P AND Q:", and_result)        # False
+print("P OR Q:", or_result)         # True
+print("NOT P:", not_result)         # False
+print("P → Q:", implies_result)     # False
+print("P ↔ Q:", equivalent_result)  # False
+```
+
+---
+
+### **2. Predicate Logic in Python**
+
+For predicate logic, we use functions to represent predicates and loops or comprehensions for quantifiers.
+
+#### **Universal Quantifier ( ∀ ):**
+```python
+# Define the domain and predicate
+domain = [1, 2, 3, 4, 5]
+predicate = lambda x: x > 0  # "x > 0"
+
+# Universal quantifier: ∀x P(x)
+universal = all(predicate(x) for x in domain)
+print("∀x (x > 0):", universal)  # True (all numbers in the domain are > 0)
+```
+
+#### **Existential Quantifier ( ∃ ):**
+```python
+# Existential quantifier: ∃x P(x)
+predicate = lambda x: x % 2 == 0  # "x is even"
+existential = any(predicate(x) for x in domain)
+print("∃x (x is even):", existential)  # True (2, 4 are even)
+```
+
+#### **Combining Predicates with Logical Connectives:**
+```python
+# Multiple predicates
+P = lambda x: x > 2  # "x > 2"
+Q = lambda x: x % 2 == 0  # "x is even"
+
+# ∀x (P(x) → Q(x))  --> True if for all x, if P(x) is true, then Q(x) is true
+implies_all = all(not P(x) or Q(x) for x in domain)
+print("∀x (x > 2 → x is even):", implies_all)  # False (e.g., x = 3 is > 2 but not even)
+```
+
+---
+
+### **3. Truth Table Generator**
+A reusable function to generate truth tables for propositional logic.
+
+```python
+from itertools import product
+
+def truth_table(variables, expression):
+    """Generate a truth table."""
+    headers = variables + [expression.__name__]
+    print("\t".join(headers))
+    print("-" * (len(headers) * 8))
+    
+    for values in product([True, False], repeat=len(variables)):
+        env = dict(zip(variables, values))
+        result = expression(**env)
+        print("\t".join(str(env[var]) for var in variables), "\t", result)
+
+# Example usage
+def expr(P, Q):
+    return (not P or Q)  # P → Q
+
+truth_table(['P', 'Q'], expr)
+```
+
+Output for \( P \rightarrow Q \):
+```
+P	Q	expr
+--------------------
+True	True	True
+True	False	False
+False	True	True
+False	False	True
+```
+
+---
+
+The **"Fame problem"** (or **celebrity problem**) is a common coding and logic problem that asks to determine if there is a "celebrity" in a group of people. A **celebrity** is defined as:
+
+1. Everyone in the group knows the celebrity.
+2. The celebrity knows no one in the group.
+
+---
+
+### **Problem Statement**
+Given \( n \) people, determine if there is a celebrity among them using the following function:
+- \( knows(A, B) \): Returns `True` if person \( A \) knows person \( B \), otherwise `False`.
+
+### **Input:**
+- \( n \): Number of people.
+- A function \( knows(A, B) \).
+
+### **Output:**
+- The index of the celebrity if one exists.
+- If no celebrity exists, return `-1`.
+
+---
+
+### **Constraints:**
+1. \( knows(A, B) \) is predefined and operates in \( O(1) \) time.
+2. Solve the problem in \( O(n) \) time complexity.
+
+---
+
+### **Solution:**
+We use a two-step process:
+1. Identify a **potential celebrity** using elimination.
+2. Verify if the candidate satisfies the celebrity conditions.
+
+---
+
+### **Python Implementation**
+```python
+def findCelebrity(n, knows):
+    # Step 1: Identify a potential celebrity
+    celebrity = 0
+    for i in range(1, n):
+        if knows(celebrity, i):
+            # If the current candidate knows someone, they cannot be the celebrity
+            celebrity = i
+
+    # Step 2: Verify the candidate
+    for i in range(n):
+        if i != celebrity and (knows(celebrity, i) or not knows(i, celebrity)):
+            # If the candidate knows someone OR someone doesn't know the candidate
+            return -1
+
+    return celebrity
+```
+
+---
+
+### **Example Usage**
+
+#### **Input Example 1:**
+Let’s define a `knows` function for a test case:
+
+```python
+# Matrix representation of "knows" relationships
+# Row i: person i, Column j: True if i knows j
+knows_matrix = [
+    [False, True, False],  # Person 0 knows 1
+    [False, False, False], # Person 1 knows nobody (Celebrity)
+    [True, True, False]    # Person 2 knows 0 and 1
+]
+
+def knows(A, B):
+    return knows_matrix[A][B]
+
+n = 3
+print("Celebrity:", findCelebrity(n, knows))  # Output: 1
+```
+
+---
+
+#### **Input Example 2 (No Celebrity):**
+```python
+knows_matrix = [
+    [False, True, False],
+    [True, False, False],
+    [False, True, False]
+]
+
+print("Celebrity:", findCelebrity(n, knows))  # Output: -1
+```
+
+---
+
+### **Explanation of the Algorithm**
+1. **Identify a Candidate:** 
+   - Start with person 0 as the candidate.
+   - If the candidate knows \( i \), eliminate the candidate and set \( i \) as the new candidate.
+   - This ensures that at most \( n-1 \) comparisons are made.
+
+2. **Verify the Candidate:**
+   - Check if everyone knows the candidate.
+   - Ensure the candidate knows no one else.
+
+This approach works in \( O(n) \) time. 
