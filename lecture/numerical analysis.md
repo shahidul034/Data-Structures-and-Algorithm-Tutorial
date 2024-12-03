@@ -62,7 +62,7 @@ Given two points:
 - ![alt text](https://latex.codecogs.com/svg.image?\((x_0,y_0)=(1,3)\))
 - ![alt text](https://latex.codecogs.com/svg.image?\((x_1,y_1)=(4,7)\))
 
-Estimate the value of \( y \) at \( x = 2.5 \).
+Estimate the value of y at x = 2.5.
 
 #### Solution:
 1. Known values:
@@ -95,7 +95,7 @@ Linear interpolation is straightforward, but its accuracy depends on the assumpt
 
 ### **Polynomial Interpolation**
 
-Polynomial interpolation is a numerical method to find a polynomial that passes exactly through a set of given points. If you have \( n+1 \) data points, the interpolating polynomial will have a degree \( n \).
+Polynomial interpolation is a numerical method to find a polynomial that passes exactly through a set of given points. If you have n+1 data points, the interpolating polynomial will have a degree n .
 
 ---
 
@@ -129,49 +129,37 @@ we aim to find a polynomial ![alt text](https://latex.codecogs.com/svg.image?\(P
 ### **Simple Example**
 
 #### Problem:
-Find a polynomial \( P(x) \) that passes through the points:
-\[
+Find a polynomial P(x) that passes through the points:
+
 (1, 2), (2, 3), (4, 5).
-\]
+
 
 #### Solution:
 
 1. **Number of Points:**
-   - We have 3 points (\( n+1 = 3 \)), so the polynomial degree \( n = 2 \):
-     \[
-     P(x) = a_0 + a_1x + a_2x^2
-     \]
+   - We have 3 points n+1 = 3 , so the polynomial degree n = 2:
+     ![alt text](https://latex.codecogs.com/svg.image?\[P(x)=a_0&plus;a_1x&plus;a_2x^2\])
 
 2. **Write the System of Equations:**
-   For each point, substitute \( x \) and \( y \) into \( P(x) \):
-   - For \( (1, 2): \quad 2 = a_0 + a_1(1) + a_2(1)^2 \),
-   - For \( (2, 3): \quad 3 = a_0 + a_1(2) + a_2(2)^2 \),
-   - For \( (4, 5): \quad 5 = a_0 + a_1(4) + a_2(4)^2 \).
+   For each point, substitute x and y into P(x):
+   - For ![alt text](https://latex.codecogs.com/svg.image?\((1,2):\quad&space;2=a_0&plus;a_1(1)&plus;a_2(1)^2\)),
+   - For ![alt text](https://latex.codecogs.com/svg.image?\((2,3):\quad&space;3=a_0&plus;a_1(2)&plus;a_2(2)^2\)),
+   - For ![alt text](https://latex.codecogs.com/svg.image?\((4,5):\quad&space;5=a_0&plus;a_1(4)&plus;a_2(4)^2\)).
 
    These give:
-   \[
-   a_0 + a_1 + a_2 = 2,
-   \]
-   \[
-   a_0 + 2a_1 + 4a_2 = 3,
-   \]
-   \[
-   a_0 + 4a_1 + 16a_2 = 5.
-   \]
+   ![alt text](https://latex.codecogs.com/svg.image?\[a_0+a_1+a_2=2,\])
+   ![alt text](https://latex.codecogs.com/svg.image?\[a_0+2a_1+4a_2=3,\])
+   ![alt text](https://latex.codecogs.com/svg.image?\[a_0+4a_1+16a_2=5.\])
 
 3. **Solve the System:**
-   Solve for \( a_0 \), \( a_1 \), and \( a_2 \). (This can be done manually or using computational tools.)
+   Solve for ![alt text](https://latex.codecogs.com/svg.image?\(a_0\),\(a_1\),and\(a_2\)). (This can be done manually or using computational tools.)
 
    Solution:
-   \[
-   a_0 = 1, \quad a_1 = 0.5, \quad a_2 = 0.25.
-   \]
+   ![alt text](https://latex.codecogs.com/svg.image?\[a_0=1,\quad&space;a_1=0.5,\quad&space;a_2=0.25.\])
 
 4. **Construct the Polynomial:**
    The polynomial is:
-   \[
-   P(x) = 1 + 0.5x + 0.25x^2.
-   \]
+   ![alt text](https://latex.codecogs.com/svg.image?\[P(x)=1+0.5x+0.25x^2.\])
 
 ---
 
@@ -181,8 +169,8 @@ Find a polynomial \( P(x) \) that passes through the points:
 2. **Smooth Curve:** The resulting polynomial is continuous and differentiable.
 
 ### **Key Challenges**
-1. **Runge's Phenomenon:** For a high degree \( n \), the polynomial may oscillate wildly.
-2. **Computation Complexity:** Solving for coefficients becomes harder as \( n \) increases.
+1. **Runge's Phenomenon:** For a high degree n, the polynomial may oscillate wildly.
+2. **Computation Complexity:** Solving for coefficients becomes harder as n increases.
 
 ---
 
@@ -200,16 +188,14 @@ In this tutorial, we'll focus on solving ODEs using two popular numerical method
 
 Consider the general first-order ODE:
 
-\[
-\frac{dy}{dx} = f(x, y)
-\]
+![alt text](https://latex.codecogs.com/svg.image?\[\frac{dy}{dx}=f(x,y)\])
 
 Where:
-- \( y \) is the unknown function of \( x \).
-- \( f(x, y) \) is a known function that defines the relationship between \( x \) and \( y \).
-- Initial condition \( y(x_0) = y_0 \) is provided.
+- y is the unknown function of x.
+- ![alt text](https://latex.codecogs.com/svg.image?\(f(x,y)\)) is a known function that defines the relationship between x and y.
+- Initial condition ![alt text](https://latex.codecogs.com/svg.image?\(y(x_0)=y_0\)) is provided.
 
-We want to find the solution \( y(x) \) over the interval \( [x_0, x_f] \), where \( x_0 \) is the initial value and \( x_f \) is the final value.
+We want to find the solution y(x) over the interval ![alt text](https://latex.codecogs.com/svg.image?\([x_0,x_f]\)), where ![alt text](https://latex.codecogs.com/svg.image?\(x_0\)) is the initial value and ![alt text](https://latex.codecogs.com/svg.image?\(x_f\)) is the final value.
 
 ---
 
@@ -218,16 +204,14 @@ We want to find the solution \( y(x) \) over the interval \( [x_0, x_f] \), wher
 Euler's method is one of the simplest and most commonly used numerical techniques to approximate solutions to ODEs. The basic idea is to discretize the continuous problem into small steps and approximate the function value at each step.
 
 #### Formula for Euler's Method:
-Given the ODE \( \frac{dy}{dx} = f(x, y) \), the approximation is:
+Given the ODE ![alt text](https://latex.codecogs.com/svg.image?\(\frac{dy}{dx}=f(x,y)\)), the approximation is:
 
-\[
-y_{n+1} = y_n + h \cdot f(x_n, y_n)
-\]
+![alt text](https://latex.codecogs.com/svg.image?\[y_{n&plus;1}=y_n&plus;h\cdot&space;f(x_n,y_n)\])
 
 Where:
-- \( y_n \) is the approximation of \( y(x_n) \).
-- \( h \) is the step size (distance between successive \( x \)-values).
-- \( f(x_n, y_n) \) is the value of the function at \( (x_n, y_n) \).
+- ![alt text](https://latex.codecogs.com/svg.image?\(y_n\)) is the approximation of ![alt text](https://latex.codecogs.com/svg.image?\((x_n)\)).
+- ![alt text](https://latex.codecogs.com/svg.image?\(h\)) is the step size (distance between successive ![alt text](https://latex.codecogs.com/svg.image?\(x\))-values).
+- ![alt text](https://latex.codecogs.com/svg.image?\(f(x_n,y_n)\)) is the value of the function at ![alt text](https://latex.codecogs.com/svg.image?\((x_n,y_n)\)).
 
 ### **Euler's Method**
 
@@ -239,56 +223,48 @@ Euler's Method is a straightforward numerical technique to approximate the solut
 
 We aim to solve the first-order ODE:
 
-\[
-\frac{dy}{dx} = f(x, y),
-\]
+![alt text](https://latex.codecogs.com/svg.image?\[\frac{dy}{dx}=f(x,y),\])
 
 with an initial condition:
 
-\[
-y(x_0) = y_0.
-\]
+![alt text](https://latex.codecogs.com/svg.image?\[y(x_0)=y_0.\])
 
-Euler's method approximates the solution by taking small steps of size \( h \) along the \( x \)-axis and updating \( y \) using the formula:
+Euler's method approximates the solution by taking small steps of size ![alt text](https://latex.codecogs.com/svg.image?\(h\)) along the ![alt text](https://latex.codecogs.com/svg.image?\(x\))-axis and updating ![alt text](https://latex.codecogs.com/svg.image?\(y\)) using the formula:
 
-\[
-y_{n+1} = y_n + h \cdot f(x_n, y_n),
-\]
+![alt text](https://latex.codecogs.com/svg.image?\[y_{n&plus;1}=y_n&plus;h\cdot&space;f(x_n,y_n),\])
 
 where:
-- \( (x_n, y_n) \) is the current point,
-- \( h \) is the step size,
-- \( f(x_n, y_n) \) is the slope (from the ODE).
+- ![alt text](https://latex.codecogs.com/svg.image?\((x_n,y_n)\)) is the current point,
+- ![alt text](https://latex.codecogs.com/svg.image?\(h\)) is the step size,
+- ![alt text](https://latex.codecogs.com/svg.image?\(f(x_n,y_n)\)) is the slope (from the ODE).
 
 ---
 
-### **Example: Solve \( \frac{dy}{dx} = x + y \)**
+### **Example: Solve ![alt text](https://latex.codecogs.com/svg.image?\(\frac{dy}{dx}=x+y\))**
 
 #### Problem:
-Solve the ODE \( \frac{dy}{dx} = x + y \) with the initial condition \( y(0) = 1 \), from \( x = 0 \) to \( x = 1 \), using a step size \( h = 0.1 \).
+Solve the ODE ![alt text](https://latex.codecogs.com/svg.image?\(\frac{dy}{dx}=x+y\)) with the initial condition ![alt text](https://latex.codecogs.com/svg.image?\(y(0)=1\)), from ![alt text](https://latex.codecogs.com/svg.image?\(x=0\)) to ![alt text](https://latex.codecogs.com/svg.image?\(x=1\)), using a step size ![alt text](https://latex.codecogs.com/svg.image?\(h=0.1\)).
 
 ---
 
 ### **Step-by-Step Solution**
 
 1. **Initial Values**:
-   - \( x_0 = 0, y_0 = 1 \),
-   - Step size \( h = 0.1 \).
+   - ![alt text](https://latex.codecogs.com/svg.image?\(x_0=0,y_0=1\)),
+   - Step size ![alt text](https://latex.codecogs.com/svg.image?\(h=0.1\)).
 
 2. **Formula**:
    Use the Euler's method formula:
-   \[
-   y_{n+1} = y_n + h \cdot f(x_n, y_n),
-   \]
-   where \( f(x, y) = x + y \).
+   ![alt text](https://latex.codecogs.com/svg.image?\[y_{n&plus;1}=y_n&plus;h\cdot&space;f(x_n,y_n),\])
+   where ![alt text](https://latex.codecogs.com/svg.image?\(f(x,y)=x&plus;y\)).
 
 3. **Iteration**:
    Compute \( y \) at successive \( x \)-values:
-   - \( x_1 = x_0 + h = 0.1 \),
-   - \( y_1 = y_0 + h \cdot f(x_0, y_0) = 1 + 0.1 \cdot (0 + 1) = 1.1 \),
-   - \( y_2 = y_1 + h \cdot f(x_1, y_1) = 1.1 + 0.1 \cdot (0.1 + 1.1) = 1.1 + 0.1 \cdot 1.2 = 1.22 \),
-   - \( y_3 = y_2 + h \cdot f(x_2, y_2) = 1.22 + 0.1 \cdot (0.2 + 1.22) = 1.22 + 0.1 \cdot 1.42 = 1.362 \),
-   - Repeat for \( x = 0.4, 0.5, \dots, 1.0 \).
+   - ![alt text](https://latex.codecogs.com/svg.image?\(x_1=x_0+h=0.1\)),
+   - ![alt text](https://latex.codecogs.com/svg.image?\(y_1=y_0&plus;h\cdot&space;f(x_0,y_0)=1&plus;0.1\cdot(0&plus;1)=1.1\)),
+   - ![alt text](https://latex.codecogs.com/svg.image?\(y_2=y_1&plus;h\cdot&space;f(x_1,y_1)=1.1&plus;0.1\cdot(0.1&plus;1.1)=1.1&plus;0.1\cdot&space;1.2=1.22\)),
+   - ![alt text](https://latex.codecogs.com/svg.image?\(y_3=y_2&plus;h\cdot&space;f(x_2,y_2)=1.22&plus;0.1\cdot(0.2&plus;1.22)=1.22&plus;0.1\cdot&space;1.42=1.362\)),
+   - Repeat for ![alt text](https://latex.codecogs.com/svg.image?\(x=0.4,0.5,\dots,1.0\)).
 
 ---
 
@@ -328,27 +304,21 @@ The Runge-Kutta method, particularly the 4th-order method (RK4), is a more accur
 #### Formula for Runge-Kutta 4th Order Method:
 Given the ODE \( \frac{dy}{dx} = f(x, y) \), the Runge-Kutta method computes:
 
-\[
-k_1 = h \cdot f(x_n, y_n)
-\]
-\[
-k_2 = h \cdot f(x_n + \frac{h}{2}, y_n + \frac{k_1}{2})
-\]
-\[
-k_3 = h \cdot f(x_n + \frac{h}{2}, y_n + \frac{k_2}{2})
-\]
-\[
-k_4 = h \cdot f(x_n + h, y_n + k_3)
-\]
+![alt text](https://latex.codecogs.com/svg.image?\[k_1=h\cdot&space;f(x_n,y_n)\])
+
+![alt text](https://latex.codecogs.com/svg.image?\[k_2=h\cdot&space;f(x_n&plus;\frac{h}{2},y_n&plus;\frac{k_1}{2})\])
+![alt text](https://latex.codecogs.com/svg.image?\[k_2=h\cdot&space;f(x_n&plus;\frac{h}{2},y_n&plus;\frac{k_1}{2})\])
+
+![alt text](https://latex.codecogs.com/svg.image?\[k_3=h\cdot&space;f(x_n&plus;\frac{h}{2},y_n&plus;\frac{k_2}{2})\])
+
+![alt text](https://latex.codecogs.com/svg.image?\[k_4=h\cdot&space;f(x_n&plus;h,y_n&plus;k_3)\])
 
 Then, the update rule is:
 
-\[
-y_{n+1} = y_n + \frac{1}{6}(k_1 + 2k_2 + 2k_3 + k_4)
-\]
+![alt text](https://latex.codecogs.com/svg.image?\[y_{n&plus;1}=y_n&plus;\frac{1}{6}(k_1&plus;2k_2&plus;2k_3&plus;k_4)\])
 
 #### Example Problem:
-Solve the same ODE \( \frac{dy}{dx} = x + y \) with initial condition \( y(0) = 1 \) using the 4th-order Runge-Kutta method.
+Solve the same ODE ![alt text](https://latex.codecogs.com/svg.image?\(\frac{dy}{dx}=x+y\)) with initial condition ![alt text](https://latex.codecogs.com/svg.image?\(y(0)=1\)) using the 4th-order Runge-Kutta method.
 
 
 
