@@ -169,10 +169,10 @@ def expr(P, Q):
 truth_table(['P', 'Q'], expr)
 ```
 <details>
-<summary><h2><i>([True, False], repeat=len(variables))</i></h2></summary>
+<summary><i>product([True, False], repeat=len(variables))</i></summary>
 This code is used to generate all possible combinations of truth values for the given variables.:
 
-### `([True, False], repeat=len(variables))`
+### `product([True, False], repeat=len(variables))`
 - **`[True, False]`**: This is a list containing the two possible truth values, `True` and `False`.
 - **`repeat=len(variables)`**: This specifies how many times the list `[True, False]` should be repeated. The `len(variables)` part calculates the number of variables you have.
 
@@ -195,6 +195,7 @@ for values in product([True, False], repeat=len(variables)):
 ```
 iterates over each combination of truth values, allowing you to evaluate the logical expression for each combination and print the results in the truth table.
 </details>
+
 
 
 Output for \( P → Q \):
