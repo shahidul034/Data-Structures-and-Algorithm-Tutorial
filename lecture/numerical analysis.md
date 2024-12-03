@@ -9,7 +9,7 @@ Interpolation is a method of estimating unknown values between known data points
 #### 1. **Linear Interpolation**
 - Connects two adjacent points with a straight line and estimates values within this interval.
 - Formula:
-![alt text](linear_interpolation.png)
+![alt text](https://latex.codecogs.com/svg.image?y=y_1+\frac{(x-x_1)(y_2-y_1)}{(x_2-x_1)})
    - ![alt text](https://latex.codecogs.com/svg.image?\(x_0,x_1\)):  Known points
    - ![alt text](https://latex.codecogs.com/svg.image?\(f(x_0),f(x_1)\)): Function values at ![alt text](https://latex.codecogs.com/svg.image?\(x_0,x_1\))
   - ![alt text](https://latex.codecogs.com/svg.image?\(x\)): Point to estimate
