@@ -34,7 +34,6 @@ Write a program to sort an array using Bubble Sort and then find the median.
 #### **6. Calculate Tree Height**  
 **Problem Statement:**  
 Write a program to calculate the height of a binary tree.
-![alt text](https://ibb.co.com/NjqZMg2)  
 - **Input:** Tree:  
   ```
         1

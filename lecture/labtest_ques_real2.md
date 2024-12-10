@@ -21,7 +21,6 @@ Write a program to find the \( k \) smallest elements in an array using Selectio
 #### **4. Verify Binary Tree Traversals**  
 **Problem Statement:**  
 Write a program to create a binary tree and implement Inorder, Preorder, and Postorder traversals.  
-![alt text](image.png)
 - **Input:** Tree:  
   ```
         1
@@ -40,7 +39,6 @@ Write a program to create a binary tree and implement Inorder, Preorder, and Pos
 #### **5. Rat in a Maze**  
 **Problem Statement:**  
 Write a program to find a path for a rat to navigate a maze using backtracking.  
-![alt text](image-1.png)
 - **Input:** Maze:  
   ```
   1 0 0 0  
